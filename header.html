@@ -1,0 +1,44 @@
+<nav>
+  <!-- logo -->
+  <a class="logo" href="index.html">
+    <img src="img/logo.svg" />
+  </a>
+  <!-- nav menu -->
+  <div class="navMenu">
+    <a class="navLink" href="index.html"> الرئيسية </a>
+    <a class="navLink" href="#!"> من نحن </a>
+    <a class="navLink" href="#!"> تواصل معنا </a>
+    <a class="navLink" href="#!"> المشاريع </a>
+    <a class="navLink" href="#!"> معرض الصور </a>
+    <a class="navLink" href="#!"> طلبات الصيانة </a>
+    <a class="navLink" href="#!"> تواصل </a>
+    <div class="dropdown">
+      <img class="icon me-2" src="img/language.svg" alt="">
+      اللغة
+      <div class="dropdown-content">
+        <a href="#!" class="dropdownItem">
+          <img src="img/flag.svg" alt="">
+          عربي
+        </a>
+        <a href="#!" class="dropdownItem">
+          <img src="img/en_flag.svg" alt="">
+          English
+        </a>
+      </div>
+    </div>
+  </div>
+  <!-- toggle btn -->
+  <div class="navBtn">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</nav>
+
+<script>
+  // nav menu
+  $(".navBtn").click(function () {
+    $(this).toggleClass("active");
+    $(".navMenu").toggleClass("active");
+  });
+</script>
