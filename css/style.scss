@@ -254,9 +254,9 @@ content {
 .headerContact {
   background-color: #06253b20;
   padding: 16px;
-  @media (max-width: 576px) {
-    display: none;
-  }
+  // @media (max-width: 576px) {
+  //   display: none;
+  // }
   .inner {
     width: min(100% - 20px, 1320px);
     display: flex;
