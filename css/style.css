@@ -339,9 +339,9 @@ content {
   padding: 16px;
 }
 .headerContact .inner {
-  width: min(100% - 20px, 1320px);
+  width: min(100% - 0px, 1320px);
   display: flex;
-  gap: 24px;
+  gap: 16px;
   margin: auto;
   flex-wrap: wrap;
   align-items: center;
@@ -362,7 +362,7 @@ content {
   height: 100%;
   background-color: var(--mainColor10);
   position: absolute;
-  left: -10px;
+  left: -8px;
   top: 0;
 }
 .headerContact .inner .link:last-child::after {
@@ -679,7 +679,7 @@ textarea.inputForm {
 }
 
 .btn {
-  padding: 12px 48px;
+  padding: 12px;
   border: 1px solid var(--mainColor);
   background-color: transparent;
   color: var(--mainColor);
@@ -687,6 +687,7 @@ textarea.inputForm {
   gap: 8px;
   min-height: 54px;
   align-items: center;
+  justify-content: center;
 }
 .btn img {
   width: 24px;
@@ -774,6 +775,9 @@ textarea.inputForm {
 }
 .mainIntro .inner .introData p {
   color: var(--textColor);
+}
+.mainIntro .inner .introData .btn {
+  width: 150px;
 }
 .mainIntro .inner .introSlider .mainSwiper {
   position: relative;
@@ -899,6 +903,7 @@ textarea.inputForm {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+  flex-wrap: wrap;
 }
 .fullSearch form .btnGroup .btn {
   height: -webkit-fit-content;
@@ -907,6 +912,16 @@ textarea.inputForm {
   background-color: rgba(6, 37, 59, 0.1882352941);
   color: var(--secondColor);
   border-color: rgba(6, 37, 59, 0.1882352941);
+  justify-content: center;
+  white-space: nowrap;
+  min-width: 120px;
+  flex: 1;
+  max-width: 240px;
+}
+@media (min-width: 992px) {
+  .fullSearch form .btnGroup .btn {
+    min-width: 160px;
+  }
 }
 .fullSearch form .btnGroup .btn:nth-child(2n) {
   background-color: var(--mainColor);
