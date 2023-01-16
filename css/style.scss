@@ -3,8 +3,8 @@
   --mainColor10: #fbf5f1;
   --mainColor30: #f4e2d6;
   --secondColor: #06253b;
-  --secondColor10: #E2F1FC;
-  --secondColor30: #A8D6F6;
+  --secondColor10: #e2f1fc;
+  --secondColor30: #a8d6f6;
   --gold: #ffd700;
   --whiteColor: #ffffff;
   --blackColor: #1f1f1f;
@@ -57,7 +57,7 @@ a:hover {
   text-decoration: none;
   color: var(--mainColor);
 }
-button{
+button {
   cursor: pointer;
 }
 button:focus {
@@ -227,7 +227,51 @@ input {
     }
   }
 }
+.select2-container--default .select2-selection--single {
+  display: flex;
+  align-items: center;
+  border: 1px solid #eee;
+  min-height: 54px;
+  background-color: #fdfdfd;
+  border-radius: 4px;
+  padding: 0 10px;
+}
+.select2 {
+  min-width: 100px ;
 
+}
+.select2-container--default
+  .select2-selection--single
+  .select2-selection__arrow {
+  left: 1px;
+  right: unset;
+  top: 50%;
+  transform: translateY(-50%);
+}
+span.select2.select2-container.select2-container--default {
+  width: 100% !important;
+}
+.select2-results__option--selectable {
+  border-radius: 0px;
+  margin-bottom: 2px;
+  padding: 12px;
+}
+.select2-container--default
+  .select2-results__option--highlighted.select2-results__option--selectable {
+  background-color: var(--secondColor) !important;
+  color: var(--whiteColor) !important;
+}
+.select2-dropdown {
+  border-radius: 4px;
+  box-shadow: var(--BigShadow) !important;
+  border-color: transparent;
+}
+.select2-container .select2-selection--single .select2-selection__rendered {
+  padding: 0px;
+}
+// .select2-container {
+//   z-index: 1060;
+// }
 /////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////
@@ -533,35 +577,80 @@ header {
     display: flex;
   }
 }
-.btnGroup{
+.inputField {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  label {
+    color: var(--textColor);
+  }
+}
+.checkBoxField {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 24px;
+  min-width: 150px;
+  label {
+    cursor: pointer;
+  }
+  input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+}
+.inputForm {
+  border: 1px solid #eee;
+  min-height: 54px;
+  background-color: #fdfdfd;
+  border-radius: 4px;
+  padding: 0 10px;
+  min-width: 100px;
+}
+textarea.inputForm {
+  padding: 10px;
+}
+::placeholder {
+  font-size: 12px !important;
+}
+.btn {
+  padding: 12px 48px;
+  border: 1px solid var(--mainColor);
+  background-color: transparent;
+  color: var(--mainColor);
+  display: flex;
+  gap: 8px;
+  min-height: 54px;
+  align-items: center;
+  img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+  }
+  &:nth-child(2n) {
+    background-color: var(--mainColor);
+    color: var(--whiteColor);
+  }
+}
+.btnGroup {
   padding: 10px 0;
   display: flex;
   gap: 12px;
-  .btn{
-    padding: 12px 48px;
-    border: 1px solid var(--mainColor);
-    background-color: transparent;
-    color: var(--mainColor);
-    display: flex;
-    gap: 8px;
-    align-items: center;
-    &:nth-child(2n){
-      background-color: var(--mainColor);
-      color: var(--whiteColor);
-    }
-  }
 }
 .mainIntro {
   padding: 20px 0;
   background-color: #06253b20;
   min-height: calc(100vh - 130px);
+  padding-bottom: 120px;
   .inner {
     width: min(100% - 40px, 1320px);
     margin: auto;
     display: flex;
     gap: 40px;
     justify-content: space-between;
-    @media (max-width:768px) {
+    @media (max-width: 768px) {
       flex-direction: column;
     }
     .introData {
@@ -571,7 +660,6 @@ header {
       flex-direction: column;
       gap: 4px;
       justify-content: center;
-     
       h4 {
         color: var(--secondColor);
         span {
@@ -584,19 +672,18 @@ header {
         font-weight: bold;
         color: var(--secondColor);
         margin-bottom: 30px;
-        @media (max-width:1200px) {
+        @media (max-width: 1200px) {
           font-size: 40px;
           margin-bottom: 20px;
-
         }
-        @media (max-width:992px) {
+        @media (max-width: 992px) {
           font-size: 35px;
         }
-        @media (max-width:768px) {
+        @media (max-width: 768px) {
           font-size: 30px;
         }
       }
-      p{
+      p {
         color: var(--textColor);
       }
     }
@@ -606,13 +693,13 @@ header {
         width: 750px;
         aspect-ratio: 9/6;
         border-radius: 2px;
-        @media (max-width:1200px) {
+        @media (max-width: 1200px) {
           width: 600px;
         }
-        @media (max-width:992px) {
+        @media (max-width: 992px) {
           width: 450px;
         }
-        @media (max-width:768px) {
+        @media (max-width: 768px) {
           width: 100%;
         }
         .swiper-slide {
@@ -673,6 +760,73 @@ header {
       }
     }
   }
+}
+.fullSearch {
+  width: min(100% - 40px, 1320px);
+  background-color: var(--whiteColor);
+  margin: auto;
+  margin-top: -80px;
+  margin-bottom: 50px;
+  padding: 20px;
+  box-shadow: var(--BigShadow);
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    @media (max-width:992px) {
+      flex-direction: column;
+    }
+    .mainInputs {
+      flex: 1;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      .defaultInputs {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        .inputField {
+          flex: 1;
+        }
+      }
+      .moreFeatures,
+      .advancedSearch {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        .inputField {
+          flex: 1;
+        }
+      }
+      .moreFeaturesBtn {
+        display: flex;
+        align-items: center;
+        background: none;
+        border: none;
+        gap: 8px;
+        margin-top: 20px;
+      }
+    }
+    .btnGroup{
+      margin-top: 19px;
+      height: fit-content;
+
+      .btn {
+        height: fit-content;
+        &.mt5 {
+          margin-top: 28px;
+        }
+        &:nth-child(2n) {
+          background-color: #06253b30;
+          color: var(--secondColor);
+          border-color: #06253b30;
+        }
+      }
+    }
+  }
+  
 }
 // //////////////////////////////////////////==================
 // //////////////////////////////////////////==================

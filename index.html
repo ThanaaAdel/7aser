@@ -17,31 +17,13 @@
   <link rel="stylesheet" href="css/odometer.min.css" />
   <!-- Swiper -->
   <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+  <!-- select2 -->
+  <link rel="stylesheet" href="css/select2.min.css" />
   <!-- Custom style  -->
   <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
-  <div class="spinner">
-    <div class="loader">
-      <div class="line"></div>
-      <div class="line"></div>
-      <div class="line"></div>
-      <div class="line"></div>
-      <div class="line"></div>
-      <div class="line"></div>
-      <div class="subline"></div>
-      <div class="subline"></div>
-      <div class="subline"></div>
-      <div class="subline"></div>
-      <div class="subline"></div>
-      <div class="loader-circle-1">
-        <div class="loader-circle-2"></div>
-      </div>
-      <div class="needle"></div>
-      <div class="loading">WKD</div>
-    </div>
-  </div>
   <!-- ================ Header ================= -->
   <section class="headerContact">
     <div class="inner">
@@ -67,7 +49,6 @@
   <content>
     <section class="mainIntro">
       <div class="inner">
-      
         <div class="introSlider">
           <!-- main Slider -->
           <section class="swiperContainer">
@@ -100,14 +81,119 @@
           <h4 data-aos="fade-up"> اهلا بك في مؤسسة <span> حصون </span> </h4>
           <h1 data-aos="fade-up"> مزيج فريد من الراحة والفخامة </h1>
           <p data-aos="fade-up">
-           اكثر من خمسون عاما من الخبرة جعلتنا من رواد السوق في المملكة العربية السعودية والمنطقة العربية باكملها . نضم افضل المهندسين في جميع المجالات بنقدم لك افضل خمدة ممكنة .
+            اكثر من خمسون عاما من الخبرة جعلتنا من رواد السوق في المملكة العربية السعودية والمنطقة العربية باكملها . نضم
+            افضل المهندسين في جميع المجالات بنقدم لك افضل خمدة ممكنة .
           </p>
-          <div class="btnGroup">
-            <a href="#!" class="btn" data-aos="fade-up" > من نحن </a>
-            <a href="#!" class="btn" data-aos="fade-up" > احجز الآن </a>
+          <div class="btnGroup" data-aos="fade-up">
+            <a href="#!" class="btn"> من نحن </a>
+            <a href="#!" class="btn"> احجز الآن </a>
           </div>
         </div>
       </div>
+    </section>
+    <section class="fullSearch">
+      <form action="">
+        <!-- main Inputs -->
+        <div class="mainInputs">
+          <!-- default Inputs -->
+          <div class="defaultInputs">
+            <!-- input -->
+            <div class="inputField">
+              <label class="form-label"> نوع المشروع </label>
+              <select name="" id="" class="select2">
+                <option value="" selected disabled> اختر </option>
+                <option value=""> فلل سكنية </option>
+                <option value=""> شقق سكنية </option>
+                <option value=""> ادوار سكنية </option>
+              </select>
+            </div>
+            <!-- input -->
+            <div class="inputField">
+              <label class="form-label"> الموقع </label>
+              <select name="" id="" class="select2">
+                <option value="" selected disabled> اختر </option>
+                <option value=""> فلل سكنية </option>
+                <option value=""> شقق سكنية </option>
+                <option value=""> ادوار سكنية </option>
+              </select>
+            </div>
+             <!-- input -->
+             <div class="inputField">
+              <label class="form-label"> بحث بالاسم </label>
+              <input type="text" class="inputForm" placeholder=" بحث ... ">
+            </div>
+          </div>
+          <!-- advanced Inputs -->
+          <div class="advancedSearch">
+            <!-- input -->
+            <div class="inputField">
+              <label class="form-label"> عدد الغرف </label>
+              <select name="" id="" class="select2">
+                <option value="" selected disabled> اختر </option>
+                <option value=""> فلل سكنية </option>
+                <option value=""> شقق سكنية </option>
+                <option value=""> ادوار سكنية </option>
+              </select>
+            </div>
+            <!-- input -->
+            <div class="inputField">
+              <label class="form-label"> دورة مياة </label>
+              <select name="" id="" class="select2">
+                <option value="" selected disabled> اختر </option>
+                <option value=""> فلل سكنية </option>
+                <option value=""> شقق سكنية </option>
+                <option value=""> ادوار سكنية </option>
+              </select>
+            </div>
+          </div>
+          <button type="button" class="moreFeaturesBtn"> <img src="img/plus.svg" alt=""> ميزات أخرى </button>
+          <!-- more Inputs -->
+          <div class="moreFeatures">
+            <!-- input -->
+            <div class="checkBoxField">
+              <input type="checkbox" id="Feature1" name="" value="">
+              <label class="form-label" for="Feature1"> مجلس </label>
+            </div>
+            <!-- input -->
+            <div class="checkBoxField">
+              <input type="checkbox" id="Feature2" name="" value="">
+              <label class="form-label" for="Feature2"> مطبخ </label>
+            </div>
+            <!-- input -->
+            <div class="checkBoxField">
+              <input type="checkbox" id="Feature3" name="" value="">
+              <label class="form-label" for="Feature3"> مدخل خاص </label>
+            </div>
+            <!-- input -->
+            <div class="checkBoxField">
+              <input type="checkbox" id="Feature4" name="" value="">
+              <label class="form-label" for="Feature4"> بلكونة </label>
+            </div>
+            <!-- input -->
+            <div class="checkBoxField">
+              <input type="checkbox" id="Feature5" name="" value="">
+              <label class="form-label" for="Feature5"> تراس </label>
+            </div>
+            <!-- input -->
+            <div class="checkBoxField">
+              <input type="checkbox" id="Feature6" name="" value="">
+              <label class="form-label" for="Feature6"> واجهة </label>
+            </div>
+            <!-- input -->
+            <div class="checkBoxField">
+              <input type="checkbox" id="Feature7" name="" value="">
+              <label class="form-label" for="Feature7"> حوش </label>
+            </div>
+
+          </div>
+
+        </div>
+        <div class="btnGroup">
+          <button type="button" class="btn advancedSearchBtn"> <img src="img/plus.svg" alt=""> بحث متقدم </button>
+          <button type="submit" class="btn"> ابحث </button>
+        </div>
+
+      </form>
     </section>
   </content>
   <!--(((((((((((((((((((((((()))))))))))))))))))))))-->
@@ -131,6 +217,8 @@
   <script src="js/aos.js"></script>
   <!-- odometer counterUp  -->
   <script src="js/odometer.min.js"></script>
+  <!-- select2  -->
+  <script src="js/select2.min.js"></script>
   <!-- Swiper JS -->
   <script src="js/swiper-bundle.min.js"></script>
   <!-- custom -->

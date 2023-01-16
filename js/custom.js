@@ -33,6 +33,16 @@ $(document).ready(function () {
       $("header").removeClass("headerAnimate");
     }
   });
+  // filter
+  $(".advancedSearchBtn").click(function () {
+    $(".advancedSearch").slideToggle();
+    $(".moreFeaturesBtn").slideToggle();
+    $(".moreFeatures").slideUp();
+
+  });
+  $(".moreFeaturesBtn").click(function () {
+    $(".moreFeatures").slideToggle();
+  });
 });
 // ////////////////////////////////////////
 // ////////////////////////////////////////
@@ -56,6 +66,11 @@ $(document).ready(function () {
       var countNumber = $(this).attr("data-count");
       $(this).html(countNumber);
     });
+  });
+  // select2
+  $(".select2search").select2();
+  $(".select2").select2({
+    minimumResultsForSearch: -1,
   });
   // aos
   AOS.init({
