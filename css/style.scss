@@ -642,8 +642,11 @@ textarea.inputForm {
 .mainIntro {
   padding: 20px 0;
   background-color: #06253b20;
-  min-height: calc(100vh - 130px);
   padding-bottom: 120px;
+  @media (max-width: 768px) {
+    padding:  0;
+    padding-bottom: 60px;
+  }
   .inner {
     width: min(100% - 40px, 1320px);
     margin: auto;
@@ -652,6 +655,8 @@ textarea.inputForm {
     justify-content: space-between;
     @media (max-width: 768px) {
       flex-direction: column;
+      width: 100%;
+      gap: 30px;
     }
     .introData {
       position: relative;
@@ -660,6 +665,9 @@ textarea.inputForm {
       flex-direction: column;
       gap: 4px;
       justify-content: center;
+      @media (max-width: 768px) {
+        padding:  20px;
+      }
       h4 {
         color: var(--secondColor);
         span {
@@ -815,13 +823,13 @@ textarea.inputForm {
 
       .btn {
         height: fit-content;
-        &.mt5 {
-          margin-top: 28px;
-        }
+        background-color: #06253b30;
+        color: var(--secondColor);
+        border-color: #06253b30;
         &:nth-child(2n) {
-          background-color: #06253b30;
-          color: var(--secondColor);
-          border-color: #06253b30;
+          background-color: var(--mainColor);
+          color: var(--whiteColor);
+          border-color: var(--mainColor);
         }
       }
     }

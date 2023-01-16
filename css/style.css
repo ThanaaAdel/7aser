@@ -708,8 +708,13 @@ textarea.inputForm {
 .mainIntro {
   padding: 20px 0;
   background-color: rgba(6, 37, 59, 0.1254901961);
-  min-height: calc(100vh - 130px);
   padding-bottom: 120px;
+}
+@media (max-width: 768px) {
+  .mainIntro {
+    padding: 0;
+    padding-bottom: 60px;
+  }
 }
 .mainIntro .inner {
   width: min(100% - 40px, 1320px);
@@ -721,6 +726,8 @@ textarea.inputForm {
 @media (max-width: 768px) {
   .mainIntro .inner {
     flex-direction: column;
+    width: 100%;
+    gap: 30px;
   }
 }
 .mainIntro .inner .introData {
@@ -730,6 +737,11 @@ textarea.inputForm {
   flex-direction: column;
   gap: 4px;
   justify-content: center;
+}
+@media (max-width: 768px) {
+  .mainIntro .inner .introData {
+    padding: 20px;
+  }
 }
 .mainIntro .inner .introData h4 {
   color: var(--secondColor);
@@ -892,14 +904,14 @@ textarea.inputForm {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-}
-.fullSearch form .btnGroup .btn.mt5 {
-  margin-top: 28px;
-}
-.fullSearch form .btnGroup .btn:nth-child(2n) {
   background-color: rgba(6, 37, 59, 0.1882352941);
   color: var(--secondColor);
   border-color: rgba(6, 37, 59, 0.1882352941);
+}
+.fullSearch form .btnGroup .btn:nth-child(2n) {
+  background-color: var(--mainColor);
+  color: var(--whiteColor);
+  border-color: var(--mainColor);
 }
 
 /* PC device :992px. */

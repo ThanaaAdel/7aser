@@ -34,11 +34,10 @@ $(document).ready(function () {
     }
   });
   // filter
+  $(".advancedSearch ,.moreFeaturesBtn ,.moreFeatures ").hide();
   $(".advancedSearchBtn").click(function () {
-    $(".advancedSearch").slideToggle();
-    $(".moreFeaturesBtn").slideToggle();
+    $(".advancedSearch , .moreFeaturesBtn").slideToggle();
     $(".moreFeatures").slideUp();
-
   });
   $(".moreFeaturesBtn").click(function () {
     $(".moreFeatures").slideToggle();
