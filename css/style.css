@@ -1072,6 +1072,96 @@ textarea.inputForm {
   visibility: visible;
 }
 
+.statistics {
+  background-color: var(--mainColor10);
+  padding: 80px 0 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 24px;
+}
+.statistics .sectionTitle {
+  display: flex;
+  flex-direction: column;
+  width: min(100% - 40px, 800px);
+}
+.statistics .sectionTitle h6 {
+  color: var(--mainColor);
+}
+.statistics .sectionTitle h1 {
+  font-weight: bold;
+  font-size: 30px;
+  color: var(--secondColor);
+  margin-bottom: 16px;
+}
+.statistics .sectionTitle p {
+  color: var(--textColor);
+}
+.statistics .inner {
+  width: min(100% - 40px, 1320px);
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  border-radius: 8px;
+}
+.statistics .inner .specifications {
+  flex: 1;
+  padding: 30px;
+  border-radius: 16px;
+  height: 100%;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 150px;
+  text-align: center;
+  background-color: var(--mainColor30);
+}
+.statistics .inner .specifications .icon {
+  width: 48px;
+  height: 48px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.statistics .inner .specifications h1 {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: var(--secondColor);
+  transition: var(--transition);
+  display: block;
+  font-size: 32px !important;
+  text-align: right;
+  white-space: nowrap;
+}
+.statistics .inner .specifications h6 {
+  color: var(--secondColor);
+  transition: var(--transition);
+  white-space: nowrap;
+  margin-top: -6px;
+}
+.statistics .inner .specifications:hover i,
+.statistics .inner .specifications:hover h6,
+.statistics .inner .specifications:hover h1 {
+  color: var(--mainColor);
+}
+@media (max-width: 768px) {
+  .statistics .inner .specifications {
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 10px;
+    text-align: center;
+    text-align: center;
+  }
+  .statistics .inner .specifications i {
+    margin: 0;
+    margin-bottom: 20px;
+    font-size: 30px;
+  }
+}
+
 /* PC device :992px. */
 @media (min-width: 992px) {
   body {

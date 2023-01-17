@@ -823,7 +823,6 @@ textarea.inputForm {
       margin-top: 19px;
       height: fit-content;
       flex-wrap: wrap;
-
       .btn {
         height: fit-content;
         background-color: #06253b30;
@@ -855,10 +854,7 @@ textarea.inputForm {
     width: min(100% - 40px, 1320px);
     margin: auto;
     padding-bottom: 40px;
-
-  
   }
-
 }
 .project {
   display: flex;
@@ -886,7 +882,6 @@ textarea.inputForm {
     flex-direction: column;
     gap: 12px;
     height: 100%;
-
     .info {
       position: absolute;
       top: 10px;
@@ -938,7 +933,6 @@ textarea.inputForm {
       display: flex;
       flex-wrap: wrap;
       gap: 16px;
-
       .details {
         text-align: center;
         display: flex;
@@ -990,6 +984,98 @@ textarea.inputForm {
   }
 }
 
+.statistics {
+  background-color: var(--mainColor10);
+  padding: 80px 0 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 24px;
+  .sectionTitle {
+    display: flex;
+    flex-direction: column;
+    width: min(100% - 40px, 800px);
+
+    h6 {
+      color: var(--mainColor);
+    }
+    h1 {
+      font-weight: bold;
+      font-size: 30px;
+      color: var(--secondColor);
+      margin-bottom: 16px;
+    }
+    p{
+      color: var(--textColor);
+    }
+  }
+  .inner {
+    width: min(100% - 40px, 1320px);
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    border-radius: 8px;
+
+    .specifications {
+      
+      flex: 1;
+      padding: 30px;
+      border-radius: 16px;
+      height: 100%;
+      transition: var(--transition);
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      min-width: 150px;
+      text-align: center;
+      background-color: var(--mainColor30);
+
+      .icon {
+        width: 48px;
+        height: 48px;
+        object-fit: contain;
+      }
+      h1 {
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: var(--secondColor);
+        transition: var(--transition);
+        display: block;
+        font-size: 32px !important;
+        text-align: right;
+        white-space: nowrap;
+      }
+      h6 {
+        color: var(--secondColor);
+        transition: var(--transition);
+        white-space: nowrap;
+        margin-top: -6px;
+      }
+      &:hover {
+        i,
+        h6,
+        h1 {
+          color: var(--mainColor);
+        }
+      }
+      @media (max-width: 768px) {
+        flex-direction: column;
+        justify-content: center;
+        padding: 20px 10px;
+        text-align: center;
+        i {
+          margin: 0;
+          margin-bottom: 20px;
+          font-size: 30px;
+        }
+        text-align: center;
+      }
+    }
+  }
+}
 // //////////////////////////////////////////==================
 // //////////////////////////////////////////==================
 // //////////////////////////////////////////==================
