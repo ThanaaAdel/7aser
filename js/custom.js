@@ -19,6 +19,25 @@ $(document).ready(function () {
       prevEl: ".mainSwiperPrev",
     },
   });
+  //project Details Slider
+  var projectDetailsSlider = new Swiper(".projectDetailsSlider", {
+    spaceBetween: 0,
+    loop: false,
+    // effect: "fade",
+    speed: 500,
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".projectDetailsSliderPagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".projectDetailsSliderNext",
+      prevEl: ".projectDetailsSliderPrev",
+    },
+  });
   // services slider
   var latestProjectsSlider = new Swiper(".latestProjectsSlider", {
     navigation: {
