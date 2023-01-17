@@ -29,7 +29,7 @@ $(document).ready(function () {
       el: ".latestProjectsSliderPagination",
     },
     loop: true,
-    spaceBetween: 30,
+    spaceBetween: 24,
     speed: 1000,
     autoplay: {
       delay: 2500,
@@ -43,10 +43,10 @@ $(document).ready(function () {
         slidesPerView: 2,
       },
       768: {
-        slidesPerView: 2,
-      },
-      991: {
         slidesPerView: 3,
+      },
+      1600: {
+        slidesPerView: 4,
       },
     },
   });
