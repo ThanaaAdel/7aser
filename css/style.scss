@@ -1146,9 +1146,12 @@ footer {
     .hotLinks {
       .links {
         display: flex;
-        flex-direction: column;
+        // flex-direction: column;
         gap: 12px;
+        flex-wrap: wrap;
         a {
+          flex: 1;
+          min-width: 100px;
           color: var(--textColor);
           display: inline-flex;
           width: min-content;

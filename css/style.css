@@ -1236,10 +1236,12 @@ footer .inner .info .social a:hover path {
 }
 footer .inner .hotLinks .links {
   display: flex;
-  flex-direction: column;
   gap: 12px;
+  flex-wrap: wrap;
 }
 footer .inner .hotLinks .links a {
+  flex: 1;
+  min-width: 100px;
   color: var(--textColor);
   display: inline-flex;
   width: -webkit-min-content;
