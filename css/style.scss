@@ -271,6 +271,15 @@ span.select2.select2-container.select2-container--default {
 // .select2-container {
 //   z-index: 1060;
 // }
+
+.fancybox__track,
+.fancybox__content,
+.carousel__track {
+  direction: ltr !important;
+}
+.fancybox__caption {
+  text-align: center;
+}
 /////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////
@@ -1077,7 +1086,7 @@ textarea.inputForm {
 }
 
 footer {
-  background: linear-gradient(45deg , #06253b10 , #06253b30);
+  background: linear-gradient(45deg, #06253b10, #06253b30);
   color: var(--whiteColor);
   padding: 60px 0 20px;
   display: flex;
@@ -1192,8 +1201,11 @@ footer {
         display: flex;
         flex-wrap: wrap;
         gap: 8px;
-        img{
-          flex: 0 0  ;
+        a {
+          flex: 0 0;
+          display: block;
+        }
+        img {
           aspect-ratio: 1/1;
           border-radius: 1px;
           min-width: 80px;
@@ -1201,14 +1213,14 @@ footer {
         }
       }
     }
-    .footerTitle{
+    .footerTitle {
       color: var(--secondColor);
       position: relative;
       text-transform: capitalize;
       padding-right: 16px;
       margin-bottom: 10px;
-      &::after{
-        content: '';
+      &::after {
+        content: "";
         position: absolute;
         right: 4px;
         bottom: 0;
@@ -1216,8 +1228,8 @@ footer {
         height: 90%;
         background-color: var(--mainColor);
       }
-      &::before{
-        content: '';
+      &::before {
+        content: "";
         position: absolute;
         right: 0;
         bottom: 0;
@@ -1225,7 +1237,6 @@ footer {
         height: 70%;
         background-color: var(--mainColor);
       }
-
     }
   }
   .copyR {
@@ -1242,7 +1253,6 @@ footer {
       justify-content: center;
       gap: 4px;
       color: var(--mainColor);
-
     }
     img {
       height: 20px;

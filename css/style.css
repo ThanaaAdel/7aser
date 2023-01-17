@@ -319,6 +319,16 @@ span.select2.select2-container.select2-container--default {
   padding: 0px;
 }
 
+.fancybox__track,
+.fancybox__content,
+.carousel__track {
+  direction: ltr !important;
+}
+
+.fancybox__caption {
+  text-align: center;
+}
+
 content {
   margin: auto;
   display: flex;
@@ -1280,8 +1290,11 @@ footer .inner .gallery .photos {
   flex-wrap: wrap;
   gap: 8px;
 }
-footer .inner .gallery .photos img {
+footer .inner .gallery .photos a {
   flex: 0 0;
+  display: block;
+}
+footer .inner .gallery .photos img {
   aspect-ratio: 1/1;
   border-radius: 1px;
   min-width: 80px;
