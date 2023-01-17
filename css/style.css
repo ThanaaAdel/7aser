@@ -1162,6 +1162,176 @@ textarea.inputForm {
   }
 }
 
+footer {
+  background: linear-gradient(45deg, rgba(6, 37, 59, 0.062745098), rgba(6, 37, 59, 0.1882352941));
+  color: var(--whiteColor);
+  padding: 60px 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+footer .inner {
+  width: min(100% - 40px, 1320px);
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+footer .inner .col {
+  flex: 1;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+footer .inner .info {
+  gap: 16px;
+}
+footer .inner .info img {
+  height: 50px;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+footer .inner .info p {
+  color: var(--textColor);
+}
+footer .inner .info .social {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+footer .inner .info .social a {
+  display: flex;
+  min-width: 48px;
+  height: 48px;
+  justify-content: center;
+  align-items: center;
+  color: var(--textColor);
+  border-radius: 4px;
+  border: 1px solid var(--textColor);
+  transition: var(--transition);
+}
+footer .inner .info .social a svg {
+  width: 20px;
+  height: 20px;
+}
+footer .inner .info .social a circle,
+footer .inner .info .social a path {
+  fill: #777;
+  transition: var(--transition);
+}
+footer .inner .info .social a:hover {
+  background-color: var(--mainColor);
+  color: var(--whiteColor);
+  border: 1px solid var(--mainColor);
+  transform: translateY(-5px);
+}
+footer .inner .info .social a:hover circle,
+footer .inner .info .social a:hover path {
+  fill: var(--whiteColor);
+}
+footer .inner .hotLinks .links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+footer .inner .hotLinks .links a {
+  color: var(--textColor);
+  display: inline-flex;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  align-items: center;
+  white-space: nowrap;
+  gap: 4px;
+}
+footer .inner .hotLinks .links a::before {
+  content: "-";
+  color: var(--mainColor);
+}
+footer .inner .hotLinks .links a:hover {
+  color: var(--mainColor);
+  transform: translateX(-4px);
+}
+footer .inner .contactFooter .contactData {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+footer .inner .contactFooter .contactData .contactLink {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--textColor);
+  padding: 4px 0;
+}
+footer .inner .contactFooter .contactData .contactLink:hover {
+  color: var(--mainColor);
+  transform: translateX(-4px);
+}
+footer .inner .gallery .photos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+footer .inner .gallery .photos img {
+  flex: 0 0;
+  aspect-ratio: 1/1;
+  border-radius: 1px;
+  min-width: 80px;
+  border: 1px solid var(--whiteColor);
+}
+footer .inner .footerTitle {
+  color: var(--secondColor);
+  position: relative;
+  text-transform: capitalize;
+  padding-right: 16px;
+  margin-bottom: 10px;
+}
+footer .inner .footerTitle::after {
+  content: "";
+  position: absolute;
+  right: 4px;
+  bottom: 0;
+  width: 2px;
+  height: 90%;
+  background-color: var(--mainColor);
+}
+footer .inner .footerTitle::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 2px;
+  height: 70%;
+  background-color: var(--mainColor);
+}
+footer .copyR {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+  border-top: 1px solid rgba(6, 37, 59, 0.1254901961);
+  gap: 8px;
+  color: var(--textColor);
+}
+footer .copyR .company {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  color: var(--mainColor);
+}
+footer .copyR img {
+  height: 20px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 /* PC device :992px. */
 @media (min-width: 992px) {
   body {

@@ -1006,7 +1006,7 @@ textarea.inputForm {
       color: var(--secondColor);
       margin-bottom: 16px;
     }
-    p{
+    p {
       color: var(--textColor);
     }
   }
@@ -1019,7 +1019,6 @@ textarea.inputForm {
     border-radius: 8px;
 
     .specifications {
-      
       flex: 1;
       padding: 30px;
       border-radius: 16px;
@@ -1073,6 +1072,178 @@ textarea.inputForm {
         }
         text-align: center;
       }
+    }
+  }
+}
+
+footer {
+  background: linear-gradient(45deg , #06253b10 , #06253b30);
+  color: var(--whiteColor);
+  padding: 60px 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  .inner {
+    width: min(100% - 40px, 1320px);
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    .col {
+      flex: 1;
+      min-width: 200px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .info {
+      gap: 16px;
+      img {
+        height: 50px;
+        width: min-content;
+        object-fit: contain;
+      }
+      p {
+        color: var(--textColor);
+      }
+      .social {
+        margin-top: auto;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        a {
+          display: flex;
+          min-width: 48px;
+          height: 48px;
+          justify-content: center;
+          align-items: center;
+          color: var(--textColor);
+          border-radius: 4px;
+          border: 1px solid var(--textColor);
+          transition: var(--transition);
+          svg {
+            width: 20px;
+            height: 20px;
+          }
+          circle,
+          path {
+            fill: #777;
+            transition: var(--transition);
+          }
+          &:hover {
+            background-color: var(--mainColor);
+            color: var(--whiteColor);
+            border: 1px solid var(--mainColor);
+            transform: translateY(-5px);
+            circle,
+            path {
+              fill: var(--whiteColor);
+            }
+          }
+        }
+      }
+    }
+    .hotLinks {
+      .links {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        a {
+          color: var(--textColor);
+          display: inline-flex;
+          width: min-content;
+          align-items: center;
+          white-space: nowrap;
+          gap: 4px;
+          &::before {
+            content: "-";
+            color: var(--mainColor);
+          }
+          &:hover {
+            color: var(--mainColor);
+            transform: translateX(-4px);
+          }
+        }
+      }
+    }
+    .contactFooter {
+      .contactData {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        .contactLink {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          color: var(--textColor);
+          padding: 4px 0;
+          &:hover {
+            color: var(--mainColor);
+            transform: translateX(-4px);
+          }
+        }
+      }
+    }
+    .gallery {
+      .photos {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        img{
+          flex: 0 0  ;
+          aspect-ratio: 1/1;
+          border-radius: 1px;
+          min-width: 80px;
+          border: 1px solid var(--whiteColor);
+        }
+      }
+    }
+    .footerTitle{
+      color: var(--secondColor);
+      position: relative;
+      text-transform: capitalize;
+      padding-right: 16px;
+      margin-bottom: 10px;
+      &::after{
+        content: '';
+        position: absolute;
+        right: 4px;
+        bottom: 0;
+        width: 2px;
+        height: 90%;
+        background-color: var(--mainColor);
+      }
+      &::before{
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 2px;
+        height: 70%;
+        background-color: var(--mainColor);
+      }
+
+    }
+  }
+  .copyR {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+    border-top: 1px solid #06253b20;
+    gap: 8px;
+    color: var(--textColor);
+    .company {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      color: var(--mainColor);
+
+    }
+    img {
+      height: 20px;
+      object-fit: contain;
     }
   }
 }
