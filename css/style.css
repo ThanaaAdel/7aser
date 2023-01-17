@@ -3,8 +3,8 @@
   --mainColor10: #fbf5f1;
   --mainColor30: #f4e2d6;
   --secondColor: #06253b;
-  --secondColor10: #e2f1fc;
-  --secondColor30: #a8d6f6;
+  --secondColor10: #06253b10;
+  --secondColor30: #06253b30;
   --gold: #ffd700;
   --whiteColor: #ffffff;
   --blackColor: #1f1f1f;
@@ -817,7 +817,7 @@ textarea.inputForm {
   content: "";
   width: 100%;
   height: 100%;
-  background: linear-gradient(rgba(6, 37, 59, 0.1882352941), rgba(6, 37, 59, 0.4784313725));
+  background: linear-gradient(var(--secondColor30), rgba(6, 37, 59, 0.4784313725));
   position: absolute;
   bottom: 0;
   right: 0;
@@ -918,9 +918,9 @@ textarea.inputForm {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  background-color: rgba(6, 37, 59, 0.1882352941);
+  background-color: var(--secondColor30);
   color: var(--secondColor);
-  border-color: rgba(6, 37, 59, 0.1882352941);
+  border-color: var(--secondColor30);
   justify-content: center;
   white-space: nowrap;
   min-width: 120px;
@@ -954,7 +954,7 @@ textarea.inputForm {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  background-color: rgba(6, 37, 59, 0.062745098);
+  background-color: var(--secondColor10);
   border-radius: 4px;
   position: relative;
 }
@@ -981,7 +981,7 @@ textarea.inputForm {
   gap: 12px;
   height: 100%;
 }
-.project .inner .info {
+.project .inner .tags {
   position: absolute;
   top: 10px;
   left: 10px;
@@ -996,7 +996,7 @@ textarea.inputForm {
           backdrop-filter: blur(4px);
   border-radius: 100px;
 }
-.project .inner .info span {
+.project .inner .tags span {
   background-color: var(--secondColor);
   color: var(--whiteColor);
   padding: 8px 16px;
@@ -1049,7 +1049,12 @@ textarea.inputForm {
   -o-object-fit: contain;
      object-fit: contain;
 }
-.project .inner .moreInfo .details .tooltip {
+.project .inner .moreInfo .details:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+}
+
+.tooltip {
   transition: var(--transition);
   position: absolute;
   top: -100%;
@@ -1064,8 +1069,9 @@ textarea.inputForm {
   opacity: 0;
   visibility: hidden;
   white-space: nowrap;
+  font-size: 12px;
 }
-.project .inner .moreInfo .details .tooltip::before {
+.tooltip::before {
   content: "";
   width: 10px;
   height: 10px;
@@ -1076,10 +1082,6 @@ textarea.inputForm {
   transform: translate(-50%, 40%) rotate(45deg);
   z-index: -1;
   border-radius: 2px;
-}
-.project .inner .moreInfo .details:hover .tooltip {
-  opacity: 1;
-  visibility: visible;
 }
 
 .statistics {
@@ -1173,7 +1175,7 @@ textarea.inputForm {
 }
 
 footer {
-  background: linear-gradient(45deg, rgba(6, 37, 59, 0.062745098), rgba(6, 37, 59, 0.1882352941));
+  background: linear-gradient(45deg, var(--secondColor10), var(--secondColor30));
   color: var(--whiteColor);
   padding: 60px 0 20px;
   display: flex;
@@ -1507,7 +1509,7 @@ footer .copyR img {
 .projectDetails .inner .mainInfo {
   display: flex;
   flex-wrap: wrap;
-  background-color: rgba(6, 37, 59, 0.062745098);
+  background-color: var(--mainColor10);
 }
 @media (max-width: 576px) {
   .projectDetails .inner .mainInfo {
@@ -1602,6 +1604,63 @@ footer .copyR img {
 }
 .projectDetails .inner .mainInfo .info p {
   color: var(--textColor);
+}
+.projectDetails .inner .mainInfo .info .tags {
+  display: inline-flex;
+  justify-content: space-between;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  gap: 8px;
+  align-items: center;
+}
+.projectDetails .inner .mainInfo .info .tags span {
+  background-color: var(--secondColor);
+  color: var(--whiteColor);
+  padding: 8px 16px;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+}
+.projectDetails .inner .mainInfo .info .location {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.projectDetails .inner .mainInfo .info .location img {
+  width: 16px;
+  height: 16px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.projectDetails .inner .mainInfo .info .moreInfo {
+  border: 1px solid var(--mainColor10);
+  padding: 10px 20px;
+  background-color: var(--mainColor30);
+  border-radius: 4px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.projectDetails .inner .mainInfo .info .moreInfo .details {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+  position: relative;
+}
+.projectDetails .inner .mainInfo .info .moreInfo .details img {
+  width: 16px;
+  height: 16px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.projectDetails .inner .mainInfo .info .moreInfo .details:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
 }
 .projectDetails .inner .mainInfo .info .btnGroup {
   margin-top: auto;
