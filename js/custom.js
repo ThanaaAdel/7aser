@@ -19,6 +19,45 @@ $(document).ready(function () {
       prevEl: ".mainSwiperPrev",
     },
   });
+  // services slider
+  var latestProjectsSlider = new Swiper(".latestProjectsSlider", {
+    navigation: {
+      nextEl: ".latestProjectsSliderNext",
+      prevEl: ".latestProjectsSliderPrev",
+    },
+    pagination: {
+      el: ".latestProjectsSliderPagination",
+    },
+    loop: true,
+    spaceBetween: 30,
+    speed: 1000,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+      },
+      576: {
+        slidesPerView: 2,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      991: {
+        slidesPerView: 3,
+      },
+    },
+  });
+  $(".latestProjectsSlider").hover(
+    function () {
+      this.swiper.autoplay.stop();
+    },
+    function () {
+      this.swiper.autoplay.start();
+    }
+  );
   // nav menu
   $(".navBtn").click(function () {
     $(this).toggleClass("active");

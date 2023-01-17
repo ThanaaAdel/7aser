@@ -167,7 +167,7 @@ input {
     transition: var(--transition);
     &::after {
       content: "" !important;
-      background-image: url(../img/arrow.svg);
+      background-image: url(../img/icons/arrow.svg);
       background-size: contain;
       width: 30px;
       height: 30px;
@@ -645,7 +645,7 @@ textarea.inputForm {
   padding-bottom: 120px;
   @media (max-width: 768px) {
     padding: 0;
-    padding-bottom: 60px;
+    padding-bottom: 90px;
   }
   .inner {
     width: min(100% - 40px, 1320px);
@@ -777,7 +777,6 @@ textarea.inputForm {
   background-color: var(--whiteColor);
   margin: auto;
   margin-top: -80px;
-  margin-bottom: 50px;
   padding: 20px;
   box-shadow: var(--BigShadow);
   form {
@@ -847,6 +846,150 @@ textarea.inputForm {
     }
   }
 }
+.latestProjects {
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  .swiperContainer {
+    width: min(100% - 40px, 1320px);
+    margin: auto;
+    padding-bottom: 40px;
+
+  
+  }
+
+}
+.project {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background-color: #06253b10;
+  border-radius: 4px;
+  position: relative;
+  img {
+    width: 100%;
+    aspect-ratio: 3/2;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 4px;
+    object-position: top right;
+    transition: var(--transition);
+    &:hover {
+      object-position: bottom left;
+      transform: scale(1.02);
+    }
+  }
+  .inner {
+    padding: 0 16px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    height: 100%;
+
+    .info {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      width: auto;
+      padding: 8px;
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      align-items: center;
+      background-color: #ffffff85;
+      backdrop-filter: blur(4px);
+      border-radius: 100px;
+      span {
+        background-color: var(--secondColor);
+        color: var(--whiteColor);
+        padding: 8px 16px;
+        border-radius: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 10px;
+      }
+    }
+    .projectName {
+      font-weight: bold;
+      color: var(--secondColor);
+      font-size: 20px;
+    }
+    .des {
+      color: var(--textColor);
+    }
+    .location {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      img {
+        width: 16px;
+        height: 16px;
+        object-fit: contain;
+      }
+    }
+    .moreInfo {
+      margin-top: auto;
+      border: 1px solid var(--mainColor10);
+      padding: 10px;
+      background-color: var(--whiteColor);
+      border-radius: 4px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+
+      .details {
+        text-align: center;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        justify-content: center;
+        position: relative;
+        img {
+          width: 16px;
+          height: 16px;
+          object-fit: contain;
+        }
+        .tooltip {
+          transition: var(--transition);
+          position: absolute;
+          top: -100%;
+          left: 50%;
+          transform: translate(-50%, -20px);
+          background-color: var(--secondColor);
+          padding: 4px 8px;
+          border-radius: 4px;
+          color: var(--whiteColor);
+          max-width: 200px;
+          z-index: 9999;
+          opacity: 0;
+          visibility: hidden;
+          white-space: nowrap;
+          &::before {
+            content: "";
+            width: 10px;
+            height: 10px;
+            background-color: var(--secondColor);
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%, 40%) rotate(45deg);
+            z-index: -1;
+            border-radius: 2px;
+          }
+        }
+        &:hover {
+          .tooltip {
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+      }
+    }
+  }
+}
+
 // //////////////////////////////////////////==================
 // //////////////////////////////////////////==================
 // //////////////////////////////////////////==================

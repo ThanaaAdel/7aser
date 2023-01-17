@@ -205,7 +205,7 @@ input {
 .swiperContainer .swiper-button-next::after,
 .swiperContainer .swiper-button-prev::after {
   content: "" !important;
-  background-image: url(../img/arrow.svg);
+  background-image: url(../img/icons/arrow.svg);
   background-size: contain;
   width: 30px;
   height: 30px;
@@ -714,7 +714,7 @@ textarea.inputForm {
 @media (max-width: 768px) {
   .mainIntro {
     padding: 0;
-    padding-bottom: 60px;
+    padding-bottom: 90px;
   }
 }
 .mainIntro .inner {
@@ -850,7 +850,6 @@ textarea.inputForm {
   background-color: var(--whiteColor);
   margin: auto;
   margin-top: -80px;
-  margin-bottom: 50px;
   padding: 20px;
   box-shadow: var(--BigShadow);
 }
@@ -927,6 +926,150 @@ textarea.inputForm {
   background-color: var(--mainColor);
   color: var(--whiteColor);
   border-color: var(--mainColor);
+}
+
+.latestProjects {
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.latestProjects .swiperContainer {
+  width: min(100% - 40px, 1320px);
+  margin: auto;
+  padding-bottom: 40px;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background-color: rgba(6, 37, 59, 0.062745098);
+  border-radius: 4px;
+  position: relative;
+}
+.project img {
+  width: 100%;
+  aspect-ratio: 3/2;
+  max-height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 4px;
+  -o-object-position: top right;
+     object-position: top right;
+  transition: var(--transition);
+}
+.project img:hover {
+  -o-object-position: bottom left;
+     object-position: bottom left;
+  transform: scale(1.02);
+}
+.project .inner {
+  padding: 0 16px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: 100%;
+}
+.project .inner .info {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: auto;
+  padding: 8px;
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.5215686275);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  border-radius: 100px;
+}
+.project .inner .info span {
+  background-color: var(--secondColor);
+  color: var(--whiteColor);
+  padding: 8px 16px;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+}
+.project .inner .projectName {
+  font-weight: bold;
+  color: var(--secondColor);
+  font-size: 20px;
+}
+.project .inner .des {
+  color: var(--textColor);
+}
+.project .inner .location {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.project .inner .location img {
+  width: 16px;
+  height: 16px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.project .inner .moreInfo {
+  margin-top: auto;
+  border: 1px solid var(--mainColor10);
+  padding: 10px;
+  background-color: var(--whiteColor);
+  border-radius: 4px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.project .inner .moreInfo .details {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+  position: relative;
+}
+.project .inner .moreInfo .details img {
+  width: 16px;
+  height: 16px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.project .inner .moreInfo .details .tooltip {
+  transition: var(--transition);
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translate(-50%, -20px);
+  background-color: var(--secondColor);
+  padding: 4px 8px;
+  border-radius: 4px;
+  color: var(--whiteColor);
+  max-width: 200px;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  white-space: nowrap;
+}
+.project .inner .moreInfo .details .tooltip::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: var(--secondColor);
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 40%) rotate(45deg);
+  z-index: -1;
+  border-radius: 2px;
+}
+.project .inner .moreInfo .details:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
 }
 
 /* PC device :992px. */
