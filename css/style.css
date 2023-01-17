@@ -728,7 +728,7 @@ textarea.inputForm {
   }
 }
 .mainIntro .inner {
-  width: min(100% - 40px, 1320px);
+  width: min(100% - 24px, 1320px);
   margin: auto;
   display: flex;
   gap: 40px;
@@ -856,7 +856,7 @@ textarea.inputForm {
 }
 
 .fullSearch {
-  width: min(100% - 40px, 1320px);
+  width: min(100% - 24px, 1320px);
   background-color: var(--whiteColor);
   margin: auto;
   margin-top: -80px;
@@ -945,7 +945,7 @@ textarea.inputForm {
   gap: 32px;
 }
 .latestProjects .swiperContainer {
-  width: min(100% - 40px, 1320px);
+  width: min(100% - 24px, 1320px);
   margin: auto;
   padding-bottom: 40px;
 }
@@ -1109,7 +1109,7 @@ textarea.inputForm {
   color: var(--textColor);
 }
 .statistics .inner {
-  width: min(100% - 40px, 1320px);
+  width: min(100% - 24px, 1320px);
   margin: auto;
   display: flex;
   flex-wrap: wrap;
@@ -1181,7 +1181,7 @@ footer {
   gap: 48px;
 }
 footer .inner {
-  width: min(100% - 40px, 1320px);
+  width: min(100% - 24px, 1320px);
   margin: auto;
   display: flex;
   flex-wrap: wrap;
@@ -1345,6 +1345,156 @@ footer .copyR img {
   height: 20px;
   -o-object-fit: contain;
      object-fit: contain;
+}
+
+.banner {
+  padding: 100px 0;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(270deg, #06253b, rgba(6, 37, 59, 0.5294117647)), url(../img/banner.jpg);
+  background-size: cover;
+}
+@media (max-width: 768px) {
+  .banner {
+    padding: 50px 10px;
+  }
+}
+.banner .routeNav {
+  width: min(100% - 24px, 1320px);
+  margin: auto;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+.banner .routeNav .Back {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 40px;
+  height: 40px;
+  background-color: var(--mainColor);
+  color: var(--whiteColor);
+  border-radius: 100%;
+  transition: var(--transition);
+  font-size: 20px;
+  border: none;
+}
+.banner .routeNav .Back img {
+  width: 16px;
+  height: 16px;
+  transform: scaleX(-1);
+  filter: invert(1);
+}
+.banner .routeNav .Back:hover {
+  background-color: var(--whiteColor);
+}
+.banner .routeNav .navigetor {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 4px;
+}
+.banner .routeNav .navigetor h1 {
+  font-weight: bold;
+  color: var(--whiteColor);
+  font-size: 35px;
+}
+@media (max-width: 768px) {
+  .banner .routeNav .navigetor h1 {
+    font-size: 25px;
+  }
+}
+.banner .routeNav .navigetor .links {
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
+  gap: 8px;
+}
+.banner .routeNav .navigetor .links a {
+  color: var(--whiteColor);
+  padding: 10px 0;
+  display: flex;
+  gap: 8px;
+}
+.banner .routeNav .navigetor .links a::after {
+  content: "/";
+  color: var(--mainColor);
+}
+.banner .routeNav .navigetor .links a:last-child {
+  color: var(--mainColor);
+}
+.banner .routeNav .navigetor .links a:last-child::after {
+  display: none;
+}
+
+.allProjects {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding-bottom: 60px;
+}
+.allProjects .inner {
+  width: min(100% - 24px, 1320px);
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.allProjects .inner .col {
+  flex: 0 0 auto;
+  width: 33.3%;
+  padding: 8px;
+}
+@media (max-width: 992px) {
+  .allProjects .inner .col {
+    width: 50%;
+  }
+}
+@media (max-width: 576px) {
+  .allProjects .inner .col {
+    width: 100%;
+  }
+}
+.allProjects .loadMore {
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  white-space: nowrap;
+  margin: auto;
+  padding: 10px 30px;
+}
+@-webkit-keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.allProjects .loadMore img {
+  width: 20px;
+  height: 20px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  filter: invert(1) contrast(2);
+}
+.allProjects .loadMore .loadingAnimation {
+  min-width: 20px;
+  min-height: 20px;
+  border: 2px solid var(--whiteColor);
+  border-top: 2px solid var(--mainColor);
+  border-radius: 50%;
+  -webkit-animation: rotate 1s linear infinite;
+          animation: rotate 1s linear infinite;
 }
 
 /* PC device :992px. */
