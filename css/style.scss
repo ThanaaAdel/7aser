@@ -1629,6 +1629,7 @@ footer {
   .table {
     text-align: center;
     border: 1px solid #eee;
+    margin-bottom: 20px;
     thead {
       background-color: var(--secondColor10);
       tr {
@@ -1722,8 +1723,14 @@ footer {
 
   .dataTables_info{
     padding: 10px 8px;
+    display: inline-flex;
+
   }
   .dataTables_paginate{
+    border: 1px solid #eee;
+    display: inline-flex;
+    float: left;
+    margin-top: 6px;
     .paginate_button {
       padding: 8px;
       min-width: 30px !important;

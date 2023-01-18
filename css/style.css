@@ -1745,6 +1745,7 @@ footer .copyR img {
 .dataTables_wrapper .table {
   text-align: center;
   border: 1px solid #eee;
+  margin-bottom: 20px;
 }
 .dataTables_wrapper .table thead {
   background-color: var(--secondColor10);
@@ -1826,6 +1827,13 @@ footer .copyR img {
 }
 .dataTables_wrapper .dataTables_info {
   padding: 10px 8px;
+  display: inline-flex;
+}
+.dataTables_wrapper .dataTables_paginate {
+  border: 1px solid #eee;
+  display: inline-flex;
+  float: left;
+  margin-top: 6px;
 }
 .dataTables_wrapper .dataTables_paginate .paginate_button {
   padding: 8px;
