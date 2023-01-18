@@ -104,7 +104,7 @@ $(document).ready(function () {
   $(".modal").hide();
   
   $(document).on('click','.reserve , .closeModal',function(){
-    $(".modal").fadeToggle(200);
+    $(".modal").toggleClass('showModal');
   })
  
 });

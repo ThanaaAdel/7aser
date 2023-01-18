@@ -1842,12 +1842,15 @@ footer .copyR img {
   position: fixed;
   top: 0;
   left: 0;
-  height: 100%;
-  width: 100%;
-  display: flex;
+  height: 0%;
+  width: 0%;
   justify-content: center;
   align-items: center;
   z-index: 9999;
+  display: none;
+  transition: var(--transition);
+  opacity: 0;
+  visibility: hidden;
 }
 .modal .modalBG {
   position: absolute;
@@ -1886,6 +1889,14 @@ footer .copyR img {
   display: flex;
   flex-direction: column;
   gap: 16px;
+}
+
+.showModal {
+  display: flex !important;
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+  visibility: visible;
 }
 
 .projectGuarantees {
@@ -1928,6 +1939,68 @@ footer .copyR img {
   color: var(--secondColor);
 }
 .projectGuarantees .inner .guarantee:hover {
+  box-shadow: var(--BigShadow);
+  transform: translateY(-5px);
+  z-index: 2;
+}
+
+.afterSalesService {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 80px 0;
+}
+.afterSalesService .sectionTitle {
+  display: flex;
+  flex-direction: column;
+  width: min(100% - 40px, 800px);
+  margin: auto;
+  align-items: center;
+}
+.afterSalesService .sectionTitle h6 {
+  color: var(--mainColor);
+}
+.afterSalesService .sectionTitle h1 {
+  font-weight: bold;
+  font-size: 30px;
+  color: var(--secondColor);
+  margin-bottom: 16px;
+}
+.afterSalesService .sectionTitle p {
+  color: var(--textColor);
+}
+.afterSalesService .inner {
+  width: min(100% - 24px, 1320px);
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.afterSalesService .inner .service {
+  flex: 1;
+  background-color: var(--mainColor10);
+  min-width: 160px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 16px;
+  text-align: center;
+  transition: var(--transition);
+  position: relative;
+}
+.afterSalesService .inner .service img {
+  height: 40px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  filter: grayscale(1);
+  opacity: 0.4;
+}
+.afterSalesService .inner .service p {
+  color: var(--secondColor);
+}
+.afterSalesService .inner .service:hover {
   box-shadow: var(--BigShadow);
   transform: translateY(-5px);
   z-index: 2;
