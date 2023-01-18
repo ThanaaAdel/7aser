@@ -100,11 +100,6 @@ $(document).ready(function () {
   $(".moreFeaturesBtn").click(function () {
     $(".moreFeatures").slideToggle();
   });
-  // modal
-  $(".modal").hide();
-  $(".reserve , .closeModal ,.modalBG ").click(function () {
-    $(".modal ").slideToggle();
-  });
 });
 // ////////////////////////////////////////
 // ////////////////////////////////////////

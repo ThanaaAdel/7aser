@@ -953,7 +953,6 @@ textarea.inputForm {
           height: 16px;
           object-fit: contain;
         }
-
         &:hover {
           .tooltip {
             opacity: 1;
@@ -1482,7 +1481,6 @@ footer {
         p {
           color: var(--textColor);
         }
-
         .tags {
           display: inline-flex;
           justify-content: space-between;
@@ -1530,7 +1528,6 @@ footer {
               height: 16px;
               object-fit: contain;
             }
-
             &:hover {
               .tooltip {
                 opacity: 1;
@@ -1539,7 +1536,6 @@ footer {
             }
           }
         }
-
         .btnGroup {
           margin-top: auto;
           .btn {
@@ -1574,7 +1570,6 @@ footer {
           }
         }
       }
-
       .reserve {
         background-color: var(--mainColor);
         color: var(--whiteColor);
@@ -1582,11 +1577,11 @@ footer {
         cursor: pointer;
         border-radius: 4px;
         font-size: 10px;
+        border: none;
       }
     }
   }
 }
-
 .tableDiv {
   background-color: var(--whiteColor);
   .table {
@@ -1594,7 +1589,6 @@ footer {
     width: 100%;
     margin: auto;
   }
-
   div.dataTables_wrapper div.dataTables_filter input {
     margin-left: 0;
     margin-right: 8px;
@@ -1685,12 +1679,10 @@ footer {
     right: 1em;
     content: "↑";
   }
-
   table.dataTable > thead > tr > th:not(.sorting_disabled),
   table.dataTable > thead > tr > td:not(.sorting_disabled) {
     padding-right: 30px;
   }
-
   table.dataTable > thead .sorting:before,
   table.dataTable > thead .sorting:after,
   table.dataTable > thead .sorting_asc:before,
@@ -1707,7 +1699,6 @@ footer {
     display: block;
     opacity: 0.3;
   }
-
   table.dataTable > thead .sorting,
   table.dataTable > thead .sorting_asc,
   table.dataTable > thead .sorting_desc,
@@ -1720,7 +1711,6 @@ footer {
   table.dataTable > thead .sorting_desc:after {
     opacity: 1;
   }
-
   .dataTables_info {
     padding: 10px 8px;
     display: inline-flex;
@@ -1736,7 +1726,6 @@ footer {
       height: 30px;
       transition: var(--transition);
       border-radius: 2px;
-
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -1751,7 +1740,6 @@ footer {
     }
   }
 }
-
 .modal {
   position: fixed;
   top: 0;
@@ -1762,7 +1750,7 @@ footer {
   justify-content: center;
   align-items: center;
   z-index: 9999;
-  .modalBG{
+  .modalBG {
     position: absolute;
     z-index: 1;
     top: 0;
@@ -1771,15 +1759,15 @@ footer {
     height: 100%;
     background-color: #000000b0;
   }
-  .modalContent{
+  .modalContent {
     background-color: var(--whiteColor);
     position: relative;
     z-index: 2;
     padding: 24px;
     border-radius: 16px;
     box-shadow: var(--BigShadow);
-    width: min(100% - 20px , 500px);
-    .closeModal{
+    width: min(100% - 20px, 500px);
+    .closeModal {
       position: absolute;
       left: 0px;
       top: -20px;
@@ -1794,15 +1782,16 @@ footer {
       justify-content: center;
       cursor: pointer;
     }
-    form{
+    form {
       display: flex;
       flex-direction: column;
       gap: 16px;
     }
   }
-
 }
-
+.showModal {
+  display: flex !important;
+}
 // //////////////////////////////////////////==================
 // //////////////////////////////////////////==================
 // //////////////////////////////////////////==================
