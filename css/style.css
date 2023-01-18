@@ -1669,6 +1669,99 @@ footer .copyR img {
   padding: 10px 30px;
   min-height: auto;
 }
+.projectDetails .inner .reservation {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-bottom: 50px;
+}
+.projectDetails .inner .reservation form {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 20px;
+  background-color: var(--secondColor10);
+}
+.projectDetails .inner .reservation form .inputField {
+  flex: 1;
+}
+.projectDetails .inner .reservation form .btnGroup {
+  padding: 0;
+  flex: 1;
+}
+.projectDetails .inner .reservation form .btnGroup .btn {
+  flex: 1;
+  white-space: nowrap;
+  padding: 10px 30px;
+}
+
+.tableDiv {
+  padding: 16px;
+  background-color: var(--whiteColor);
+}
+.tableDiv .table {
+  width: 100%;
+}
+.tableDiv div.dataTables_wrapper div.dataTables_filter input {
+  margin-left: 0;
+  margin-right: 8px;
+  background-color: rgba(255, 255, 255, 0.3137254902);
+}
+.tableDiv .table-striped > tbody > tr:nth-of-type(odd) > *,
+.tableDiv table.dataTable.table-striped > tbody > tr.odd {
+  background-color: var(--mainColor10);
+}
+.tableDiv .colored {
+  background-color: var(--mainColor) !important;
+  color: var(--whiteColor) !important;
+}
+.tableDiv .dtr-details {
+  display: flex !important;
+  flex-direction: column;
+}
+.tableDiv .dtr-details .dtr-data {
+  display: flex;
+  white-space: break-spaces;
+}
+.tableDiv .active > .page-link,
+.tableDiv .page-link.active {
+  background-color: var(--mainColor);
+  border-color: var(--mainColor);
+}
+.tableDiv .page-link:focus {
+  box-shadow: 0 0 0 0.25rem var(--mainColor30);
+}
+
+.tableSection {
+  background-color: var(--secondColor10);
+  padding: 10px;
+}
+.tableSection .tableHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 16px;
+  gap: 16px;
+  border-radius: 16px;
+  color: var(--secondColor);
+}
+.tableSection .tableHead h6 {
+  font-weight: bold;
+  padding: 8px 0;
+}
+.tableSection .tableHead .customBtn {
+  background-color: var(--mainColor10);
+  border-radius: 16px;
+  font-size: 13px;
+  padding: 6px 18px;
+  border: 3px solid var(--mainColor30);
+}
+.tableSection .tableHead .customBtn:hover {
+  border: 3px solid var(--mainColor10);
+  background-color: var(--whiteColor);
+  color: var(--mainColor);
+}
 
 /* PC device :992px. */
 @media (min-width: 992px) {
