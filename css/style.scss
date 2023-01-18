@@ -1791,6 +1791,26 @@ footer {
   background-color: var(--secondColor10);
   padding: 40px 0;
   margin-top: 50px;
+  
+  .sectionTitle {
+    display: flex;
+    flex-direction: column;
+    width: min(100% - 40px, 800px);
+    margin: auto;
+    align-items: center;
+    h6 {
+      color: var(--mainColor);
+    }
+    h1 {
+      font-weight: bold;
+      font-size: 30px;
+      color: var(--secondColor);
+      margin-bottom: 16px;
+    }
+    p {
+      color: var(--textColor);
+    }
+  }
   .inner {
     width: min(100% - 24px, 1320px);
     margin: auto;
