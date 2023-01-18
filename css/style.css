@@ -1706,47 +1706,13 @@ footer .copyR img {
   border: none;
 }
 
-.tableDiv {
-  background-color: var(--whiteColor);
-}
-.tableDiv .table {
-  width: 100%;
-  margin: auto;
-}
-.tableDiv div.dataTables_wrapper div.dataTables_filter input {
-  margin-left: 0;
-  margin-right: 8px;
-  background-color: rgba(255, 255, 255, 0.3137254902);
-}
-.tableDiv .table-striped > tbody > tr:nth-of-type(odd) > *,
-.tableDiv table.dataTable.table-striped > tbody > tr.odd {
-  background-color: var(--mainColor10);
-}
-.tableDiv .colored {
-  background-color: var(--mainColor) !important;
-  color: var(--whiteColor) !important;
-}
-.tableDiv .dtr-details {
-  display: flex !important;
-  flex-direction: column;
-}
-.tableDiv .dtr-details .dtr-data {
-  display: flex;
-  white-space: break-spaces;
-}
-.tableDiv .active > .page-link,
-.tableDiv .page-link.active {
-  background-color: var(--mainColor);
-  border-color: var(--mainColor);
-}
-.tableDiv .page-link:focus {
-  box-shadow: 0 0 0 0.25rem var(--mainColor30);
-}
-
 .dataTables_wrapper .table {
   text-align: center;
   border: 1px solid #eee;
-  margin-bottom: 20px;
+  width: 100%;
+  margin: auto;
+  margin-bottom: 10px;
+  background-color: var(--secondColor10);
 }
 .dataTables_wrapper .table thead {
   background-color: var(--secondColor10);
@@ -1759,6 +1725,23 @@ footer .copyR img {
 .dataTables_wrapper .table tbody tr td {
   padding: 20px 12px;
   white-space: nowrap;
+}
+.dataTables_wrapper table.dataTable > tbody > tr.child ul.dtr-details > li {
+  border-bottom: 1px solid var(--secondColor10);
+  padding: 10px 0;
+}
+.dataTables_wrapper .table-striped > tbody > tr:nth-of-type(odd) > *,
+.dataTables_wrapper table.dataTable.table-striped > tbody > tr.odd {
+  background-color: rgba(6, 37, 59, 0.0196078431);
+}
+.dataTables_wrapper .dtr-details {
+  display: flex !important;
+  flex-direction: column;
+}
+.dataTables_wrapper .dtr-details .dtr-data {
+  display: flex;
+  white-space: break-spaces;
+  flex-wrap: wrap;
 }
 .dataTables_wrapper .dtr-details li {
   text-align: start;
@@ -1905,8 +1888,49 @@ footer .copyR img {
   gap: 16px;
 }
 
-.showModal {
-  display: flex !important;
+.projectGuarantees {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  background-color: var(--secondColor10);
+  padding: 40px 0;
+  margin-top: 50px;
+}
+.projectGuarantees .inner {
+  width: min(100% - 24px, 1320px);
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.projectGuarantees .inner .guarantee {
+  flex: 1;
+  background-color: var(--whiteColor);
+  min-width: 160px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 16px;
+  text-align: center;
+  transition: var(--transition);
+  position: relative;
+}
+.projectGuarantees .inner .guarantee img {
+  height: 40px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  filter: grayscale(1);
+  opacity: 0.4;
+}
+.projectGuarantees .inner .guarantee p {
+  color: var(--secondColor);
+}
+.projectGuarantees .inner .guarantee:hover {
+  box-shadow: var(--BigShadow);
+  transform: translateY(-5px);
+  z-index: 2;
 }
 
 /* PC device :992px. */

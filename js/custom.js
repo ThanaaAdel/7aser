@@ -100,6 +100,13 @@ $(document).ready(function () {
   $(".moreFeaturesBtn").click(function () {
     $(".moreFeatures").slideToggle();
   });
+  // modal
+  $(".modal").hide();
+  
+  $(document).on('click','.reserve , .closeModal',function(){
+    $(".modal").fadeToggle(200);
+  })
+ 
 });
 // ////////////////////////////////////////
 // ////////////////////////////////////////
