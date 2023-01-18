@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --mainColor: #cc7a3e;
   --mainColor10: #fbf5f1;
@@ -1695,13 +1696,21 @@ footer .copyR img {
   white-space: nowrap;
   padding: 10px 30px;
 }
+.projectDetails .inner .reservation .text-success {
+  background-color: var(--mainColor);
+  color: var(--whiteColor);
+  padding: 8px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 10px;
+}
 
 .tableDiv {
-  padding: 16px;
   background-color: var(--whiteColor);
 }
 .tableDiv .table {
   width: 100%;
+  margin: auto;
 }
 .tableDiv div.dataTables_wrapper div.dataTables_filter input {
   margin-left: 0;
@@ -1733,34 +1742,108 @@ footer .copyR img {
   box-shadow: 0 0 0 0.25rem var(--mainColor30);
 }
 
-.tableSection {
-  background-color: var(--secondColor10);
-  padding: 10px;
+.dataTables_wrapper .table {
+  text-align: center;
+  border: 1px solid #eee;
 }
-.tableSection .tableHead {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 8px 16px;
-  gap: 16px;
-  border-radius: 16px;
+.dataTables_wrapper .table thead {
+  background-color: var(--secondColor10);
+}
+.dataTables_wrapper .table thead tr th {
+  padding: 12px;
+  white-space: nowrap;
   color: var(--secondColor);
 }
-.tableSection .tableHead h6 {
-  font-weight: bold;
-  padding: 8px 0;
+.dataTables_wrapper .table tbody tr td {
+  padding: 20px 12px;
+  white-space: nowrap;
 }
-.tableSection .tableHead .customBtn {
-  background-color: var(--mainColor10);
-  border-radius: 16px;
-  font-size: 13px;
-  padding: 6px 18px;
-  border: 3px solid var(--mainColor30);
+.dataTables_wrapper .dtr-details li {
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
-.tableSection .tableHead .customBtn:hover {
-  border: 3px solid var(--mainColor10);
-  background-color: var(--whiteColor);
-  color: var(--mainColor);
+.dataTables_wrapper .dataTables_length {
+  padding-bottom: 10px;
+}
+.dataTables_wrapper .dataTables_length label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.dataTables_wrapper .dataTables_length select {
+  padding: 8px;
+  min-width: 100px;
+}
+.dataTables_wrapper table.dataTable > thead .sorting::after,
+.dataTables_wrapper table.dataTable > thead .sorting_asc::after,
+.dataTables_wrapper table.dataTable > thead .sorting_desc::after,
+.dataTables_wrapper table.dataTable > thead .sorting_asc_disabled::after,
+.dataTables_wrapper table.dataTable > thead .sorting_desc_disabled::after {
+  right: 0.5em;
+  content: "↓";
+}
+.dataTables_wrapper table.dataTable > thead .sorting::before,
+.dataTables_wrapper table.dataTable > thead .sorting_asc::before,
+.dataTables_wrapper table.dataTable > thead .sorting_desc::before,
+.dataTables_wrapper table.dataTable > thead .sorting_asc_disabled::before,
+.dataTables_wrapper table.dataTable > thead .sorting_desc_disabled::before {
+  right: 1em;
+  content: "↑";
+}
+.dataTables_wrapper table.dataTable > thead > tr > th:not(.sorting_disabled),
+.dataTables_wrapper table.dataTable > thead > tr > td:not(.sorting_disabled) {
+  padding-right: 30px;
+}
+.dataTables_wrapper table.dataTable > thead .sorting:before,
+.dataTables_wrapper table.dataTable > thead .sorting:after,
+.dataTables_wrapper table.dataTable > thead .sorting_asc:before,
+.dataTables_wrapper table.dataTable > thead .sorting_asc:after,
+.dataTables_wrapper table.dataTable > thead .sorting_desc:before,
+.dataTables_wrapper table.dataTable > thead .sorting_desc:after,
+.dataTables_wrapper table.dataTable > thead .sorting_asc_disabled:before,
+.dataTables_wrapper table.dataTable > thead .sorting_asc_disabled:after,
+.dataTables_wrapper table.dataTable > thead .sorting_desc_disabled:before,
+.dataTables_wrapper table.dataTable > thead .sorting_desc_disabled:after {
+  position: absolute;
+  bottom: 50%;
+  transform: translateY(50%);
+  display: block;
+  opacity: 0.3;
+}
+.dataTables_wrapper table.dataTable > thead .sorting,
+.dataTables_wrapper table.dataTable > thead .sorting_asc,
+.dataTables_wrapper table.dataTable > thead .sorting_desc,
+.dataTables_wrapper table.dataTable > thead .sorting_asc_disabled,
+.dataTables_wrapper table.dataTable > thead .sorting_desc_disabled {
+  cursor: pointer;
+  position: relative;
+}
+.dataTables_wrapper table.dataTable > thead .sorting_asc:before,
+.dataTables_wrapper table.dataTable > thead .sorting_desc:after {
+  opacity: 1;
+}
+.dataTables_wrapper .dataTables_info {
+  padding: 10px 8px;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+  padding: 8px;
+  min-width: 30px !important;
+  height: 30px;
+  transition: var(--transition);
+  border-radius: 2px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button.current {
+  color: var(--whiteColor);
+  background-color: var(--mainColor);
+}
+.dataTables_wrapper .dataTables_paginate span {
+  display: inline-flex;
 }
 
 /* PC device :992px. */
