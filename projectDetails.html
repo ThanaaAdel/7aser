@@ -163,7 +163,7 @@
         <!-- Reservation -->
         <section class="reservation">
           <!-- form -->
-          <form action="">
+          <form action="" class="searchForm">
             <!-- input -->
             <div class="inputField">
               <label class="form-label"> رقم الشقة : </label>
@@ -236,7 +236,7 @@
                     669,000ريال
                   </td>
                   <td>
-                    <btn class="text-success"> احجز الآن </btn>
+                    <btn class="reserve"> احجز الآن </btn>
                   </td>
                 </tr>
                 <tr>
@@ -256,7 +256,7 @@
                     659,000ريال
                   </td>
                   <td>
-                    <btn class="text-success"> احجز الآن </btn>
+                    <btn class="reserve"> احجز الآن </btn>
                   </td>
                 </tr>
                 <tr>
@@ -347,7 +347,7 @@
                     669,000ريال
                   </td>
                   <td>
-                    <btn class="text-success"> احجز الآن </btn>
+                    <btn class="reserve"> احجز الآن </btn>
                   </td>
                 </tr>
                 <tr>
@@ -390,7 +390,7 @@
                     669,000ريال
                   </td>
                   <td>
-                    <btn class="text-success"> احجز الآن </btn>
+                    <btn class="reserve"> احجز الآن </btn>
                   </td>
                 </tr>
                 <tr>
@@ -421,7 +421,7 @@
                     669,000ريال
                   </td>
                   <td>
-                    <btn class="text-success"> احجز الآن </btn>
+                    <btn class="reserve"> احجز الآن </btn>
                   </td>
                 </tr>
                 <tr>
@@ -440,7 +440,7 @@
                     669,000ريال
                   </td>
                   <td>
-                    <btn class="text-success"> احجز الآن </btn>
+                    <btn class="reserve"> احجز الآن </btn>
                   </td>
                 </tr>
                 <tr>
@@ -458,11 +458,38 @@
                   </td>
                   <td> 674,000ريال </td>
                   <td>
-                    <btn class="text-success"> احجز الآن </btn>
+                    <btn class="reserve"> احجز الآن </btn>
                   </td>
                 </tr>
               </tbody>
             </table>
+            <!-- modal -->
+            <div class="modal">
+              <span class="modalBG"></span>
+              <div class="modalContent">
+                <span class="closeModal">&times;</span>
+
+                <form action="">
+                  <!-- input -->
+                  <div class="inputField">
+                    <label class="form-label"> الاسم : </label>
+                    <input type="text" class="inputForm" placeholder=" مثال : محمد احمد ">
+                  </div>
+                  <!-- input -->
+                  <div class="inputField">
+                    <label class="form-label"> البريد الالكتروني : </label>
+                    <input type="email" class="inputForm" placeholder=" مثال : mail@mail.com ">
+                  </div>
+                  <!-- input -->
+                  <div class="inputField">
+                    <label class="form-label"> الجوال : </label>
+                    <input type="number" class="inputForm" placeholder=" مثال : 0500000000 ">
+                  </div>
+                  <button type="submit" class="btn"> ارسال </button>
+
+                </form>
+              </div>
+            </div>
           </div>
         </section>
       </div>
