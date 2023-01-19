@@ -24,7 +24,8 @@
   <!-- Filepond css -->
   <link rel="stylesheet" href="css/filepond.min.css" />
   <!-- Custom style  -->
-  <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" id="styleLink" href="css/style.css" />
+
 </head>
 
 <body>
@@ -47,11 +48,11 @@
           <img class="icon me-2" src="img/icons/language.svg" alt="">
           اللغة
           <div class="dropdown-content">
-            <a href="#!" class="dropdownItem">
+            <a href="#!" id="arabicLanguage" class="dropdownItem">
               <img src="img/flag.svg" alt="">
               عربي
             </a>
-            <a href="#!" class="dropdownItem">
+            <a href="#!" id="englishLanguage" class="dropdownItem">
               <img src="img/en_flag.svg" alt="">
               English
             </a>
@@ -78,7 +79,7 @@
           <img src="img/icons/arrow.svg" alt="">
         </button> -->
         <div class="navigetor">
-          <h1> خدمة الصيانة  </h1>
+          <h1> خدمة الصيانة </h1>
           <div class="links">
             <a href="index.html">
               الرئيسية
@@ -428,6 +429,30 @@
   <script src="js/filepond.min.js"></script>
   <!-- custom -->
   <script src="js/custom.js"></script>
+
+  <script>
+
+    // filepond
+    FilePond.registerPlugin(FilePondPluginImagePreview);
+    $(".filepond-circle").filepond({
+      labelIdle: `Drag & Drop your picture or <span class="filepond--label-action"> Browse </span>`,
+      imagePreviewHeight: 170,
+      imageCropAspectRatio: "1:1",
+      imageResizeTargetWidth: 200,
+      imageResizeTargetHeight: 200,
+      stylePanelLayout: "compact circle",
+      styleLoadIndicatorPosition: "center bottom",
+      styleProgressIndicatorPosition: "left bottom",
+      styleButtonRemoveItemPosition: "center bottom",
+      styleButtonProcessItemPosition: "right bottom",
+    });
+    $(".filepond").filepond({
+      mirror: true,
+    });
+    $(".filepond-multiple").filepond({
+      allowMultiple: true,
+    });
+  </script>
 </body>
 
 </html>

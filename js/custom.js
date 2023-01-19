@@ -77,7 +77,6 @@ $(document).ready(function () {
       this.swiper.autoplay.start();
     }
   );
-
   var topSlider = new Swiper(".topSlider", {
     speed: 1000,
     loop: true,
@@ -91,7 +90,6 @@ $(document).ready(function () {
       clickable: true,
     },
   });
-
   // nav menu
   $(".navBtn").click(function () {
     $(this).toggleClass("active");
@@ -116,31 +114,30 @@ $(document).ready(function () {
     $(".moreFeatures").slideToggle();
   });
   // modal
+  //////////////////////////////////////////
+
   $(".modal").hide();
   $(document).on("click", ".reserve , .closeModal", function () {
     $(".modal").toggleClass("showModal");
   });
-
-  // filepond
-  FilePond.registerPlugin(FilePondPluginImagePreview);
-  $(".filepond-circle").filepond({
-    labelIdle: `Drag & Drop your picture or <span class="filepond--label-action"> Browse </span>`,
-    imagePreviewHeight: 170,
-    imageCropAspectRatio: "1:1",
-    imageResizeTargetWidth: 200,
-    imageResizeTargetHeight: 200,
-    stylePanelLayout: "compact circle",
-    styleLoadIndicatorPosition: "center bottom",
-    styleProgressIndicatorPosition: "left bottom",
-    styleButtonRemoveItemPosition: "center bottom",
-    styleButtonProcessItemPosition: "right bottom",
+  //////////////////////////////////////////
+  // language
+  //////////////////////////////////////////
+  $("#englishLanguage").click(function () {
+    $("#styleLink").attr("href", "css/styleEN.css");
+    localStorage.setItem("language", "english");
   });
-  $(".filepond").filepond({
-    mirror: true,
+  $("#arabicLanguage").click(function () {
+    $("#styleLink").attr("href", "css/style.css");
+    localStorage.setItem("language", "arabic");
   });
-  $(".filepond-multiple").filepond({
-    allowMultiple: true,
-  });
+  var savedLanguage = localStorage.getItem("language");
+  if (savedLanguage === "english") {
+    $("#styleLink").attr("href", "css/styleEN.css");
+  } else if (savedLanguage === "arabic") {
+    $("#styleLink").attr("href", "css/style.css");
+  }
+  //////////////////////////////////////////
 });
 // ////////////////////////////////////////
 // ////////////////////////////////////////
