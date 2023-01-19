@@ -2025,6 +2025,153 @@ footer .copyR img {
   z-index: 2;
 }
 
+.about {
+  width: min(100% - 20px, 1000px);
+  margin: auto;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+.about .col {
+  flex: 1;
+  min-width: 300px;
+  padding: 10px;
+  position: relative;
+}
+.about .topSlider img {
+  height: 550px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 8px;
+}
+@media (max-width: 768px) {
+  .about .topSlider img {
+    height: 450px;
+  }
+}
+.about .experience {
+  padding: 30px;
+  padding-top: 15px;
+  background-color: var(--mainColor);
+  color: var(--whiteColor);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  z-index: 3;
+  border-radius: 8px;
+  flex-direction: column;
+  gap: 8px;
+  box-shadow: -8px 8px 0 0px #1f1f1f;
+}
+.about .experience span {
+  font-weight: bold;
+  font-size: 40px;
+}
+.about .title {
+  flex-direction: column-reverse;
+}
+.about .title .side {
+  text-align: start !important;
+  align-items: flex-start !important;
+}
+.about .title .side p {
+  max-width: unset;
+}
+.about .title .distance {
+  width: unset;
+  height: 2px;
+}
+.about ul {
+  padding: 10px;
+  margin: 0;
+  list-style: decimal;
+}
+.about ul .special {
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  color: #777;
+}
+.about ul .special span {
+  color: var(--mainColor);
+  font-weight: bold;
+}
+.about .moreInfo {
+  font-style: italic;
+  color: #777;
+}
+
+.values {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  background-color: var(--secondColor10);
+  padding: 40px 0;
+  margin-top: 50px;
+}
+.values .sectionTitle {
+  display: flex;
+  flex-direction: column;
+  width: min(100% - 40px, 800px);
+  margin: auto;
+  align-items: center;
+}
+.values .sectionTitle h6 {
+  color: var(--mainColor);
+}
+.values .sectionTitle h1 {
+  font-weight: bold;
+  font-size: 30px;
+  color: var(--secondColor);
+  margin-bottom: 16px;
+}
+.values .sectionTitle p {
+  color: var(--textColor);
+}
+.values .inner {
+  width: min(100% - 24px, 1320px);
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.values .inner .value {
+  flex: 1;
+  background-color: var(--whiteColor);
+  min-width: 200px;
+  padding: 30px 20px 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 16px;
+  text-align: center;
+  transition: var(--transition);
+  position: relative;
+}
+.values .inner .value img {
+  height: 60px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.values .inner .value p {
+  color: var(--textColor);
+}
+.values .inner .value h5 {
+  font-weight: bold;
+  color: var(--secondColor);
+}
+.values .inner .value:hover {
+  box-shadow: var(--BigShadow);
+  transform: translateY(-5px);
+  z-index: 2;
+}
+
 /* PC device :992px. */
 @media (min-width: 992px) {
   body {

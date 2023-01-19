@@ -77,6 +77,21 @@ $(document).ready(function () {
       this.swiper.autoplay.start();
     }
   );
+
+  var topSlider = new Swiper(".topSlider", {
+    speed: 1000,
+    loop: true,
+    effect: "fade",
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
+  
   // nav menu
   $(".navBtn").click(function () {
     $(this).toggleClass("active");
