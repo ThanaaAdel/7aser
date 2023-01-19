@@ -2207,6 +2207,7 @@ footer .copyR img {
   display: flex;
   height: 400px;
   min-width: 20vw;
+  border: 3px solid var(--secondColor30);
 }
 .galleryPage .inner a img {
   width: 100%;
