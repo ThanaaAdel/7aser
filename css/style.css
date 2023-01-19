@@ -330,6 +330,14 @@ span.select2.select2-container.select2-container--default {
   text-align: center;
 }
 
+.filepond--credits {
+  display: none !important;
+}
+
+.filepond--image-clip {
+  direction: ltr !important;
+}
+
 content {
   margin: auto;
   display: flex;
@@ -2196,7 +2204,7 @@ footer .copyR img {
   padding-bottom: 50px;
 }
 .galleryPage .inner {
-  width: min(100% - 40px, 1320px);
+  width: min(100% - 30px, 1320px);
   margin: auto;
   display: flex;
   flex-wrap: wrap;
@@ -2231,6 +2239,50 @@ footer .copyR img {
   .galleryPage .inner {
     gap: 4px;
   }
+}
+
+.maintenanceRequests {
+  padding: 50px 0;
+}
+.maintenanceRequests .inner {
+  width: min(100% - 30px, 1024px);
+  margin: auto;
+  display: flex;
+  gap: 48px;
+}
+.maintenanceRequests .inner .maintenanceImg {
+  width: 400px;
+  height: 400px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+@media (max-width: 1200px) {
+  .maintenanceRequests .inner .maintenanceImg {
+    width: 300px;
+    height: 300px;
+  }
+}
+@media (max-width: 768px) {
+  .maintenanceRequests .inner .maintenanceImg {
+    display: none;
+  }
+}
+.maintenanceRequests .inner form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 24px;
+  box-shadow: var(--BigShadow);
+}
+.maintenanceRequests .inner form .inputField {
+  flex: 1;
+  min-width: 200px;
+}
+.maintenanceRequests .inner form .btn {
+  width: 100%;
+}
+.maintenanceRequests .inner form .fullWidth {
+  width: 100%;
 }
 
 /* PC device :992px. */

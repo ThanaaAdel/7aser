@@ -91,7 +91,7 @@ $(document).ready(function () {
       clickable: true,
     },
   });
-  
+
   // nav menu
   $(".navBtn").click(function () {
     $(this).toggleClass("active");
@@ -117,11 +117,30 @@ $(document).ready(function () {
   });
   // modal
   $(".modal").hide();
-  
-  $(document).on('click','.reserve , .closeModal',function(){
-    $(".modal").toggleClass('showModal');
-  })
- 
+  $(document).on("click", ".reserve , .closeModal", function () {
+    $(".modal").toggleClass("showModal");
+  });
+
+  // filepond
+  FilePond.registerPlugin(FilePondPluginImagePreview);
+  $(".filepond-circle").filepond({
+    labelIdle: `Drag & Drop your picture or <span class="filepond--label-action"> Browse </span>`,
+    imagePreviewHeight: 170,
+    imageCropAspectRatio: "1:1",
+    imageResizeTargetWidth: 200,
+    imageResizeTargetHeight: 200,
+    stylePanelLayout: "compact circle",
+    styleLoadIndicatorPosition: "center bottom",
+    styleProgressIndicatorPosition: "left bottom",
+    styleButtonRemoveItemPosition: "center bottom",
+    styleButtonProcessItemPosition: "right bottom",
+  });
+  $(".filepond").filepond({
+    mirror: true,
+  });
+  $(".filepond-multiple").filepond({
+    allowMultiple: true,
+  });
 });
 // ////////////////////////////////////////
 // ////////////////////////////////////////

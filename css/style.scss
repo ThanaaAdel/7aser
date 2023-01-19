@@ -279,6 +279,14 @@ span.select2.select2-container.select2-container--default {
 .fancybox__caption {
   text-align: center;
 }
+
+.filepond--credits {
+  display: none !important;
+}
+.filepond--image-clip {
+  direction: ltr !important;
+}
+
 /////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////
@@ -2071,7 +2079,7 @@ footer {
 .galleryPage {
   padding-bottom: 50px;
   .inner {
-    width: min(100% - 40px , 1320px);
+    width: min(100% - 30px, 1320px);
     margin: auto;
     display: flex;
     flex-wrap: wrap;
@@ -2089,19 +2097,61 @@ footer {
         object-fit: cover;
       }
 
-      &:nth-child(4n){
+      &:nth-child(4n) {
         min-width: 40vw;
       }
-      @media (max-width:768px) {
+      @media (max-width: 768px) {
         height: 200px;
         min-width: 30vw;
-        &:nth-child(4n){
+        &:nth-child(4n) {
           min-width: 60vw;
         }
       }
     }
-    @media (max-width:768px) {
+    @media (max-width: 768px) {
       gap: 4px;
+    }
+  }
+}
+.maintenanceRequests {
+  padding: 50px 0;
+  .inner {
+    width: min(100% - 30px, 1024px);
+    margin: auto;
+    display: flex;
+    gap: 48px;
+    .maintenanceImg {
+      width: 400px;
+      height: 400px;
+      object-fit: contain;
+      @media (max-width:1200px) {
+        width: 300px;
+        height: 300px;
+      }
+
+      @media (max-width:768px) {
+        display: none;
+      }
+    }
+    form {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      padding: 24px;
+      box-shadow: var(--BigShadow);
+
+      .inputField {
+        flex: 1;
+        min-width: 200px;
+
+      }
+      .btn{
+        width: 100%;
+      }
+
+      .fullWidth{
+        width: 100%;
+      }
     }
   }
 }
