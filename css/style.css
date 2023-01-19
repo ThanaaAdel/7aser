@@ -2292,7 +2292,7 @@ footer .copyR img {
 }
 @media (max-width: 768px) {
   .contactUs {
-    padding: 0;
+    padding-top: 0;
   }
 }
 .contactUs .contact {

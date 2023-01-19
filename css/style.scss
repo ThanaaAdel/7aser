@@ -2161,7 +2161,7 @@ footer {
   width: min(100% - 40px, 1320px);
   margin: 0 auto;
   @media (max-width: 768px) {
-    padding: 0;
+    padding-top: 0;
   }
   .contact {
     display: flex;
