@@ -1846,6 +1846,36 @@ footer .copyR img {
 .dataTables_wrapper .dataTables_paginate span {
   display: inline-flex;
 }
+.dataTables_wrapper table.dataTable.dtr-inline.collapsed > tbody > tr > td.dtr-control, .dataTables_wrapper table.dataTable.dtr-inline.collapsed > tbody > tr > th.dtr-control {
+  position: relative;
+  padding-left: 30px;
+  padding-right: 12px;
+  cursor: pointer;
+}
+.dataTables_wrapper table.dataTable.dtr-inline.collapsed > tbody > tr > td.dtr-control:before,
+.dataTables_wrapper table.dataTable.dtr-inline.collapsed > tbody > tr > th.dtr-control:before {
+  top: 50%;
+  right: unset;
+  left: 5px;
+  height: 20px;
+  width: 20px;
+  margin-top: -10px;
+  display: block;
+  position: absolute;
+  color: white;
+  border: none;
+  border-radius: 2px;
+  box-shadow: none;
+  line-height: 20px;
+  content: "+";
+  background-color: var(--mainColor);
+  transition: var(--transition);
+}
+.dataTables_wrapper table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td.dtr-control:before,
+.dataTables_wrapper table.dataTable.dtr-inline.collapsed > tbody > tr.parent > th.dtr-control:before {
+  content: "-";
+  background-color: var(--secondColor);
+}
 
 .modal {
   position: fixed;

@@ -1274,7 +1274,7 @@ footer {
   padding: 80px 0;
   display: flex;
   flex-direction: column;
-  background: linear-gradient( to left , #06253b, #06253b87),
+  background: linear-gradient(to left, #06253b, #06253b87),
     url(../img/banner.jpg);
   background-size: cover;
   @media (max-width: 768px) {
@@ -1733,6 +1733,42 @@ footer {
       display: inline-flex;
     }
   }
+  table.dataTable.dtr-inline.collapsed>tbody>tr>td.dtr-control, table.dataTable.dtr-inline.collapsed>tbody>tr>th.dtr-control {
+    position: relative;
+    padding-right: 30px;
+    padding-left: 12px;
+    cursor: pointer;
+}
+  table.dataTable.dtr-inline.collapsed > tbody > tr > td.dtr-control:before,
+  table.dataTable.dtr-inline.collapsed > tbody > tr > th.dtr-control:before {
+    top: 50%;
+    left: unset;
+    right: 5px;
+    height: 20px;
+    width: 20px;
+    margin-top: -10px;
+    display: block;
+    position: absolute;
+    color: white;
+    border: none;
+    border-radius: 2px;
+    box-shadow: none;
+    line-height: 20px;
+    content: "+";
+    background-color: var(--mainColor);
+    transition: var(--transition);
+  }
+  table.dataTable.dtr-inline.collapsed
+    > tbody
+    > tr.parent
+    > td.dtr-control:before,
+  table.dataTable.dtr-inline.collapsed
+    > tbody
+    > tr.parent
+    > th.dtr-control:before {
+    content: "-";
+    background-color: var(--secondColor);
+  }
 }
 .modal {
   position: fixed;
@@ -2124,12 +2160,12 @@ footer {
       width: 400px;
       height: 400px;
       object-fit: contain;
-      @media (max-width:1200px) {
+      @media (max-width: 1200px) {
         width: 300px;
         height: 300px;
       }
 
-      @media (max-width:768px) {
+      @media (max-width: 768px) {
         display: none;
       }
     }
@@ -2143,13 +2179,12 @@ footer {
       .inputField {
         flex: 1;
         min-width: 200px;
-
       }
-      .btn{
+      .btn {
         width: 100%;
       }
 
-      .fullWidth{
+      .fullWidth {
         width: 100%;
       }
     }
