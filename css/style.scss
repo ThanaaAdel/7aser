@@ -1,7 +1,7 @@
 :root {
-  --mainColor: #cc7a3e;
-  --mainColor10: #fbf5f1;
-  --mainColor30: #f4e2d6;
+  --mainColor: #C49850;
+  --mainColor10: #FBF8F2;
+  --mainColor30: #F2E9D9;
   --secondColor: #06253b;
   --secondColor10: #06253b10;
   --secondColor30: #06253b30;
@@ -879,6 +879,7 @@ textarea.inputForm {
   background-color: var(--secondColor10);
   border-radius: 4px;
   position: relative;
+  width: 100%;
   img {
     width: 100%;
     aspect-ratio: 3/2;
