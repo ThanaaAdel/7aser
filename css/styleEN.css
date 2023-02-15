@@ -90,7 +90,7 @@ p {
 
 @media (max-width: 767px) {
   .container,
-.container-fluid {
+  .container-fluid {
     padding: 0px 8px;
   }
 }
@@ -158,12 +158,6 @@ input {
   font-weight: normal !important;
 }
 
-:-ms-input-placeholder {
-  font-size: 12px;
-  color: #bababa !important;
-  font-weight: normal !important;
-}
-
 ::placeholder {
   font-size: 12px;
   color: #bababa !important;
@@ -221,7 +215,7 @@ input {
 }
 @media (max-width: 768px) {
   .swiperContainer .swiper-button-next,
-.swiperContainer .swiper-button-prev {
+  .swiperContainer .swiper-button-prev {
     display: none;
   }
 }
@@ -389,7 +383,6 @@ content {
 }
 
 header {
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
   right: 0;
@@ -685,10 +678,6 @@ textarea.inputForm {
   font-size: 12px !important;
 }
 
-:-ms-input-placeholder {
-  font-size: 12px !important;
-}
-
 ::placeholder {
   font-size: 12px !important;
 }
@@ -914,13 +903,11 @@ textarea.inputForm {
 }
 .fullSearch form .btnGroup {
   margin-top: 19px;
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   flex-wrap: wrap;
 }
 .fullSearch form .btnGroup .btn {
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   background-color: var(--secondColor30);
@@ -1212,7 +1199,6 @@ footer .inner .info {
 }
 footer .inner .info img {
   height: 50px;
-  width: -webkit-min-content;
   width: -moz-min-content;
   width: min-content;
   -o-object-fit: contain;
@@ -1267,7 +1253,6 @@ footer .inner .hotLinks .links a {
   min-width: 100px;
   color: var(--textColor);
   display: inline-flex;
-  width: -webkit-min-content;
   width: -moz-min-content;
   width: min-content;
   align-items: center;
@@ -1470,7 +1455,6 @@ footer .copyR img {
   }
 }
 .allProjects .loadMore {
-  width: -webkit-min-content;
   width: -moz-min-content;
   width: min-content;
   white-space: nowrap;
@@ -1490,16 +1474,7 @@ footer .copyR img {
   border: 2px solid var(--whiteColor);
   border-top-color: transparent;
   border-radius: 50%;
-  -webkit-animation: rotate 1s linear infinite;
-          animation: rotate 1s linear infinite;
-}
-@-webkit-keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  animation: rotate 1s linear infinite;
 }
 @keyframes rotate {
   from {
@@ -1619,7 +1594,6 @@ footer .copyR img {
 .projectDetails .inner .mainInfo .info .tags {
   display: inline-flex;
   justify-content: space-between;
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   gap: 8px;
@@ -2503,8 +2477,7 @@ footer .copyR img {
   box-shadow: rgba(0, 0, 0, 0.0509803922) 0 50px 60px;
   border-radius: 100%;
   overflow: hidden;
-  -webkit-animation: map linear 90s infinite;
-          animation: map linear 90s infinite;
+  animation: map linear 90s infinite;
 }
 .contactUs .contactForm .worldMap .orbic {
   position: absolute;
@@ -2524,38 +2497,32 @@ footer .copyR img {
   stroke-linecap: round;
   stroke-width: 4px;
   stroke-dasharray: 1 9;
-  -webkit-animation: orbic linear 2s infinite;
-          animation: orbic linear 2s infinite;
+  animation: orbic linear 2s infinite;
 }
 .contactUs .contactForm .worldMap #orbic_dots use {
   fill: #fff;
   stroke: rgba(30, 144, 255, 0.25);
   stroke-width: 4;
-  -webkit-animation: dots ease 1s infinite alternate;
-          animation: dots ease 1s infinite alternate;
+  animation: dots ease 1s infinite alternate;
 }
 .contactUs .contactForm .worldMap #orbic_dot1 {
   transform: translate(50.4%, 29.6%);
 }
 .contactUs .contactForm .worldMap #orbic_dot2 {
   transform: translate(5%, 62.8%);
-  -webkit-animation-delay: 0.2s !important;
-          animation-delay: 0.2s !important;
+  animation-delay: 0.2s !important;
 }
 .contactUs .contactForm .worldMap #orbic_dot3 {
   transform: translate(97%, 41%);
-  -webkit-animation-delay: 0.3s !important;
-          animation-delay: 0.3s !important;
+  animation-delay: 0.3s !important;
 }
 .contactUs .contactForm .worldMap #orbic_dot4 {
   transform: translate(50%, 70.2%);
-  -webkit-animation-delay: 0.5s !important;
-          animation-delay: 0.5s !important;
+  animation-delay: 0.5s !important;
 }
 .contactUs .contactForm .worldMap #orbic_dot5 {
   transform: translate(31.5%, 51.5%);
-  -webkit-animation-delay: 0.7s !important;
-          animation-delay: 0.7s !important;
+  animation-delay: 0.7s !important;
 }
 .contactUs .contactForm .worldMap #orbic_user1 {
   transform: translate(1%, 40%) scale(0.666667);
@@ -2572,29 +2539,14 @@ footer .copyR img {
 .contactUs .contactForm .worldMap #orbic_user5 {
   transform: translate(75%, 53%) scale(0.666667);
 }
-@-webkit-keyframes map {
-  100% {
-    background-position: 220% 50%;
-  }
-}
 @keyframes map {
   100% {
     background-position: 220% 50%;
   }
 }
-@-webkit-keyframes orbic {
-  100% {
-    stroke-dashoffset: 10;
-  }
-}
 @keyframes orbic {
   100% {
     stroke-dashoffset: 10;
-  }
-}
-@-webkit-keyframes dots {
-  100%, 80% {
-    stroke: #1e90ff;
   }
 }
 @keyframes dots {
@@ -2623,8 +2575,7 @@ footer .copyR img {
     background-size: 100% auto;
     box-shadow: none;
     border-radius: 0;
-    -webkit-animation: none;
-            animation: none;
+    animation: none;
   }
 }
 @media (max-width: 476px) {
@@ -2645,6 +2596,214 @@ footer .copyR img {
   .contactUs .map {
     margin-top: 24px;
   }
+}
+
+.vision {
+  padding: 50px 0;
+  position: relative;
+  background: linear-gradient(to right, rgba(6, 37, 59, 0), rgba(6, 37, 59, 0.13)), url(../img/bg-1.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: left top;
+}
+@media (max-width: 768px) {
+  .vision {
+    background: linear-gradient(to bottom, rgba(6, 37, 59, 0), rgba(6, 37, 59, 0.13)), url(../img/bg-1.jpg);
+  }
+}
+.vision .inner {
+  width: min(100% - 30px, 1320px);
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+.vision .inner .image {
+  flex: 1;
+  position: relative;
+  min-width: 300px;
+  isolation: isolate;
+}
+.vision .inner .image img {
+  width: 100%;
+  height: 100%;
+  min-height: 250px;
+  max-height: 350px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.vision .inner .image::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: -10px;
+  top: -10px;
+  background-color: var(--secondColor10);
+  z-index: -1;
+}
+.vision .inner .image::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: -10px;
+  left: -10px;
+  background-color: var(--secondColor30);
+  z-index: -1;
+}
+.vision .inner .info {
+  flex: 1;
+  min-width: 300px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+}
+@media (max-width: 768px) {
+  .vision .inner .info {
+    padding: 0px;
+  }
+}
+.vision .inner .info h1 {
+  font-size: 34px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--secondColor);
+}
+.vision .inner .info h1 .icon {
+  margin-top: 10px;
+  width: 36px;
+  height: 36px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.vision .inner .info p {
+  color: var(--textColor);
+}
+.vision .inner .info ul {
+  list-style: square;
+  padding: 0;
+  margin: 0;
+}
+@media (max-width: 768px) {
+  .vision .inner .info ul {
+    padding-left: 16px;
+  }
+}
+.vision .inner .info ul li {
+  padding: 4px;
+  color: var(--textColor);
+}
+.vision .inner .info ul li span {
+  color: var(--mainColor);
+  display: block;
+}
+
+.goals {
+  padding: 50px 0;
+}
+@media (max-width: 768px) {
+  .goals {
+    padding-top: 20px;
+  }
+}
+.goals .inner {
+  width: min(100% - 30px, 1320px);
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+@media (max-width: 768px) {
+  .goals .inner {
+    flex-direction: column-reverse;
+  }
+}
+.goals .inner .image {
+  flex: 1;
+  position: relative;
+  min-width: 300px;
+  isolation: isolate;
+}
+.goals .inner .image img {
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.goals .inner .image::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: -10px;
+  top: -10px;
+  background-color: var(--secondColor10);
+  z-index: -1;
+}
+.goals .inner .image::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: -10px;
+  left: -10px;
+  background-color: var(--secondColor30);
+  z-index: -1;
+}
+.goals .inner .info {
+  flex: 1;
+  min-width: 300px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+@media (max-width: 768px) {
+  .goals .inner .info {
+    padding: 0px;
+  }
+}
+.goals .inner .info h1 {
+  font-size: 34px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--secondColor);
+}
+.goals .inner .info h1 .icon {
+  margin-top: 10px;
+  width: 36px;
+  height: 36px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.goals .inner .info p {
+  color: var(--textColor);
+}
+.goals .inner .info ul {
+  list-style: square;
+  padding: 0;
+  margin: 0;
+}
+@media (max-width: 768px) {
+  .goals .inner .info ul {
+    padding-left: 16px;
+  }
+}
+.goals .inner .info ul li {
+  padding: 4px;
+  color: var(--textColor);
+}
+.goals .inner .info ul li span {
+  color: var(--mainColor);
+  display: block;
 }
 
 /* PC device :992px. */
@@ -2671,7 +2830,7 @@ footer .copyR img {
     font-size: 15px;
   }
   a,
-p {
+  p {
     font-size: 14px;
   }
 }
@@ -2700,7 +2859,7 @@ p {
     font-size: 15px;
   }
   a,
-p {
+  p {
     font-size: 14px;
   }
 }
@@ -2729,7 +2888,7 @@ p {
     font-size: 14px;
   }
   a,
-p {
+  p {
     font-size: 13px;
   }
 }/*# sourceMappingURL=styleEN.css.map */
